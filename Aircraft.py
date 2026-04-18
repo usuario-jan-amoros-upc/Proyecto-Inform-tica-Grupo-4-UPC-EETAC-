@@ -263,7 +263,7 @@ if __name__ == "__main__":
     MapFlights(inspeccion, airports) #Llamamos de nuevo la funcion MapFlights y
     print("Archivo KML de LARGA DISTANCIA generado con éxito.")
 
-print("Hola")
+
 
 
 
