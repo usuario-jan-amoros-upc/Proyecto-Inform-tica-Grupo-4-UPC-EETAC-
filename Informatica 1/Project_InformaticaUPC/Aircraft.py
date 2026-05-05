@@ -282,6 +282,7 @@ if __name__ == "__main__":
 
     PlotFlightsType(aircrafts,airports)
 
+"""Patata"""
 
 
 
