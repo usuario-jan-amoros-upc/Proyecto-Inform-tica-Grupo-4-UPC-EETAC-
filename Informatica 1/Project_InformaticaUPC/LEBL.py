@@ -129,7 +129,72 @@ def GateOccupancy(bcn):
     return lista_informe
 
 
+def IsAirlineInTerminal(terminal, nombre):
+    if nombre == "":    # Si el nombre de la aerolínea es una cadena vacía, devuelve False y código de error -1
+        return False, -1
 
+    if len(terminal.airlines) == 0:   # Si la lista de aerolíneas de la terminal no existe o está vacía
+        return False
+
+    encontrada = False
+    i = 0
+    # Recorremos la lista de aerolíneas de la terminal buscando coincidencia
+    while i < len(terminal.airlines) and encontrada == False:
+        if terminal.airlines[i] == nombre:
+            encontrada = True
+        i += 1
+
+    return encontrada
+
+
+def SearchTerminal(bcn, name):
+    nombre_terminal = ""    #iniciamo el nombre de la terminal como una lista vacia, asi si no encontramos la aerolínea devolveremos una cadena nula
+    t = 0    #índice para recorrer la lista de terminales del aeropuerto
+
+    while t < len(bcn.terminals) and nombre_terminal == "":  #bucle que se usará mientras no hayamos revisado todas las terminales o no la hayamos encontrado ya
+        encontrada = IsAirlineInTerminal(bcn.terminals[t], name)   #llamamos a la función anterior que nos devolverá True si la aerolinea está en la terminal
+
+        if encontrada == True:          #si encontramos la terminal correcta damos su nombre
+            nombre_terminal = bcn.terminals[t].name
+        t = t + 1
+
+    return nombre_terminal
+
+
+def AssignGate(bcn, aircraft):
+    nombre_term_correcta = SearchTerminal(bcn, aircraft.airline)   #para ver en que terminal va la aerolinea del avión
+
+    if nombre_term_correcta == "":          #Si la aerolínea no está en ninguna terminal devolvemos error
+        return -1
+
+    t = 0
+    encontrada = False
+    while t < len(bcn.terminals) and encontrada == False:  #buscamos la terminal dentro de las terminales de barcelona
+        if bcn.terminals[t].name == nombre_term_correcta:
+            term_obj = bcn.terminals[t]
+            encontrada = True
+        t = t + 1
+
+    a = 0
+    puerta_asignada = False
+    while a < len(term_obj.boarding_areas) and puerta_asignada == False:     #buscamos la zona de embarque dentro de esa terminal
+        area = term_obj.boarding_areas[a]
+
+        # Comprobamos si el área coincide con el tipo de vuelo del avión
+        if (aircraft.schengen == True and area.type == "Schengen") or  (aircraft.schengen == False and area.type == "non-Schengen"):
+            g = 0
+            while g < len(area.gates) and puerta_asignada == False:     #buscamos la primera puerta libre
+                puerta = area.gates[g]
+
+                if puerta.occupied == False:
+                    puerta.occupied = True
+                    puerta.aircraft_id = aircraft.id
+                    puerta_asignada = True
+                g = g + 1
+        a = a + 1
+
+    if puerta_asignada == False:
+        return -2                        # Código de error si no hay puertas libres
 
 
 
