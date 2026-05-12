@@ -3,6 +3,96 @@
 <Document>
   <name>Trayectorias de Vuelos</name>
 <Placemark>
+  <name>Vuelo ECMKV</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      20.306944444444444,44.81944444444445,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECJGM</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -2.275,53.35388888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLOB</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      14.477500000000001,35.8575,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLVC</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      22.97083333333333,40.51972222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo DALEC</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.484444444444445,50.90138888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo N327UP</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      7.142777777777778,50.865833333333335,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo ECMKN</name>
   <Style>
     <LineStyle>
@@ -13,6 +103,96 @@
   <LineString>
     <coordinates>
       25.479166666666664,36.399166666666666,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo DALEN</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      12.236388888888888,51.42388888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMKT</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      23.944444444444446,37.93666666666666,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo N920FD</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.5477777777777777,49.00972222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo OEIBZ</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      5.442777777777778,50.63638888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIDPG</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.738888888888889,39.55166666666666,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLTG</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.738888888888889,39.55166666666666,0
       2.083294,41.297445,0
     </coordinates>
   </LineString>
@@ -33,6 +213,96 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo EIFJP</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.738888888888889,39.55166666666666,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECKRH</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      26.084999999999997,44.571111111111115,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLVV</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.738888888888889,39.55166666666666,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLYB</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.2186111111111115,39.862500000000004,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLXV</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.738888888888889,39.55166666666666,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo PHXRD</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.764166666666667,52.308055555555555,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo ECMAI</name>
   <Style>
     <LineStyle>
@@ -48,6 +318,81 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo GRAJG</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.8622222222222224,51.19888888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GEZWE</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      8.723055555555556,45.63,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIFOG</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -5.898888888888888,37.418055555555554,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo DAIQE</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      9.221944444444444,48.69,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo OOJEM</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.460277777777778,51.18944444444444,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo ECLZZ</name>
   <Style>
     <LineStyle>
@@ -58,6 +403,96 @@
   <LineString>
     <coordinates>
       39.169999999999995,45.03472222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo HALXH</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      19.261944444444445,47.43944444444444,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GEZAT</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      5.0811111111111105,45.72555555555556,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMBS</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -5.898888888888888,37.418055555555554,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECJYX</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -8.377222222222223,43.301944444444445,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo DAEBP</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      11.786111111111111,48.35388888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo OOSSW</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.484444444444445,50.90138888888889,0
       2.083294,41.297445,0
     </coordinates>
   </LineString>
@@ -93,6 +528,21 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo DABZA</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      6.7572222222222225,51.280833333333334,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo N823NW</name>
   <Style>
     <LineStyle>
@@ -103,6 +553,81 @@
   <LineString>
     <coordinates>
       -84.43333333333334,33.63333333333333,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMAH</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      12.238888888888889,41.80027777777777,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIENM</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      13.500555555555556,52.36222222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMBT</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -6.034722222222222,43.56361111111111,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECJQZ</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -3.560833333333333,40.47222222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo HBIOK</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      8.548055555555555,47.45805555555556,0
       2.083294,41.297445,0
     </coordinates>
   </LineString>
@@ -138,6 +663,66 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo ECMLM</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.3794444444444447,48.723333333333336,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo DAGWT</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      9.68361111111111,52.46027777777778,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECJQQ</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -3.560833333333333,40.47222222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo PHHSK</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      5.374444444444444,51.45,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo ECMGE</name>
   <Style>
     <LineStyle>
@@ -148,6 +733,36 @@
   <LineString>
     <coordinates>
       37.906388888888884,55.40861111111111,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo DAIPZ</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      6.7572222222222225,51.280833333333334,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GEUUC</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.4613888888888889,51.4775,0
       2.083294,41.297445,0
     </coordinates>
   </LineString>
@@ -168,6 +783,51 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo EIEKL</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -8.678055555555554,41.23555555555556,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLUL</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -3.560833333333333,40.47222222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo OELBR</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      16.56972222222222,48.11027777777778,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo N76054</name>
   <Style>
     <LineStyle>
@@ -178,6 +838,36 @@
   <LineString>
     <coordinates>
       -74.16833333333334,40.696666666666665,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIFIY</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      1.3730555555555557,38.87277777777778,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMFM</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -5.898888888888888,37.418055555555554,0
       2.083294,41.297445,0
     </coordinates>
   </LineString>
@@ -198,6 +888,156 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo FGTAZ</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.5477777777777777,49.00972222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo OYKBP</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      12.65611111111111,55.61805555555556,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMHA</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.738888888888889,39.55166666666666,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo DAGWI</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      7.142777777777778,50.865833333333335,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLLJ</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      1.3730555555555557,38.87277777777778,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMKV</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -1.7905555555555555,43.35638888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo DAIDL</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      8.570555555555556,50.03333333333333,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECJTR</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.764166666666667,52.308055555555555,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIFRF</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -6.27,53.421388888888885,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GZBAI</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.19027777777777777,51.14805555555556,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo TCJNZ</name>
   <Style>
     <LineStyle>
@@ -208,6 +1048,186 @@
   <LineString>
     <coordinates>
       28.81416666666667,40.976111111111116,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GEZDU</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      13.500555555555556,52.36222222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo B5913</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      16.56972222222222,48.11027777777778,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo OELED</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      16.56972222222222,48.11027777777778,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GZBAH</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -1.7480555555555557,52.45388888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMHS</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -9.134166666666665,38.774166666666666,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLML</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      1.3730555555555557,38.87277777777778,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIDAM</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      9.700277777777776,45.66888888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GEZTG</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -2.7191666666666667,51.382777777777775,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo CSTTO</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -9.134166666666665,38.774166666666666,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GEZUM</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      6.109444444444444,46.23833333333334,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIDEJ</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -6.27,53.421388888888885,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMLE</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -1.607777777777778,47.15694444444444,0
       2.083294,41.297445,0
     </coordinates>
   </LineString>
@@ -228,6 +1248,111 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo ECLZF</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.2186111111111115,39.862500000000004,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo CSDXZ</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      7.634444444444444,48.54194444444444,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GEZPC</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -2.8497222222222223,53.33361111111111,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo PHBXF</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.764166666666667,52.308055555555555,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIEBK</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -2.275,53.35388888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLVC</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -3.777222222222222,37.18861111111111,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIDPM</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -3.3725,55.95,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo ECMBK</name>
   <Style>
     <LineStyle>
@@ -238,6 +1363,156 @@
   <LineString>
     <coordinates>
       49.280277777777776,55.606944444444444,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLUN</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      3.2144444444444447,36.693888888888885,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GEZBD</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -6.215833333333333,54.6575,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLRY</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -3.560833333333333,40.47222222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIEFW</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -8.415277777777778,42.896388888888886,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIDHP</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -1.7480555555555557,52.45388888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLOB</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      7.215,43.665277777777774,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIDWK</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.484444444444445,50.90138888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo YRBGI</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      26.084999999999997,44.571111111111115,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIENO</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.112777777777778,49.45444444444445,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo YRBAP</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      26.084999999999997,44.571111111111115,0
       2.083294,41.297445,0
     </coordinates>
   </LineString>
@@ -258,6 +1533,21 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo GEUUO</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.4613888888888889,51.4775,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo N790AN</name>
   <Style>
     <LineStyle>
@@ -268,6 +1558,36 @@
   <LineString>
     <coordinates>
       -80.28333333333333,25.8,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GEZWN</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.19027777777777777,51.14805555555556,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo SXDGQ</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      23.944444444444446,37.93666666666666,0
       2.083294,41.297445,0
     </coordinates>
   </LineString>
@@ -303,6 +1623,96 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo ECHUH</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -3.560833333333333,40.47222222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo IBIXR</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      12.238888888888889,41.80027777777777,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECKMI</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -5.898888888888888,37.418055555555554,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GOZBE</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -2.275,53.35388888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo SPLND</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      20.96722222222222,52.16583333333333,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIDAE</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      12.238888888888889,41.80027777777777,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo N290AY</name>
   <Style>
     <LineStyle>
@@ -333,6 +1743,21 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo ECKLT</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -3.560833333333333,40.47222222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo ECMMH</name>
   <Style>
     <LineStyle>
@@ -343,6 +1768,36 @@
   <LineString>
     <coordinates>
       -16.341666666666665,28.482777777777777,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMHB</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.3794444444444447,48.723333333333336,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLXV</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.738888888888889,39.55166666666666,0
       2.083294,41.297445,0
     </coordinates>
   </LineString>
@@ -363,6 +1818,81 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo ECMBY</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      16.06888888888889,45.74305555555556,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo DAIDF</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      11.786111111111111,48.35388888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIDCJ</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      0.23500000000000001,51.885,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMKN</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      6.109444444444444,46.23833333333334,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECJTQ</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -8.627500000000001,42.22916666666667,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo LNNGP</name>
   <Style>
     <LineStyle>
@@ -373,6 +1903,111 @@
   <LineString>
     <coordinates>
       11.08388888888889,60.20277777777778,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMIQ</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      11.202777777777778,43.808611111111105,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GEZBI</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.3683333333333333,51.874722222222225,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMGZ</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      12.351944444444444,45.50527777777778,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLQM</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.484444444444445,50.90138888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GCELG</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -2.275,53.35388888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GEZTA</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      7.529166666666667,47.59,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo DAISG</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      8.570555555555556,50.03333333333333,0
       2.083294,41.297445,0
     </coordinates>
   </LineString>
@@ -393,6 +2028,51 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo LNDYW</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      12.65611111111111,55.61805555555556,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GEZAT</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.7152777777777777,44.828611111111115,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIDHX</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      11.296944444444444,44.530833333333334,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo CFIYE</name>
   <Style>
     <LineStyle>
@@ -403,6 +2083,51 @@
   <LineString>
     <coordinates>
       -79.63055555555555,43.67722222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMJC</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      16.298055555555557,43.538888888888884,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECKRH</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.2186111111111115,39.862500000000004,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo HBJYI</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      6.109444444444444,46.23833333333334,0
       2.083294,41.297445,0
     </coordinates>
   </LineString>
@@ -423,6 +2148,141 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo ECMBE</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      8.548055555555555,47.45805555555556,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo CNRGG</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -7.581666666666666,33.36416666666667,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMJR</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.3683333333333333,51.874722222222225,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo TSIMV</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      10.226944444444445,36.85111111111111,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLQL</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      11.786111111111111,48.35388888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo FF333</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.2905555555555552,43.555,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GGDFK</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -1.6608333333333332,53.86611111111111,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLRG</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      12.236388888888888,51.42388888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMBT</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.738888888888889,39.55166666666666,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo N803NW</name>
   <Style>
     <LineStyle>
@@ -433,6 +2293,21 @@
   <LineString>
     <coordinates>
       -73.77833333333334,40.640277777777776,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GEUYC</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.4613888888888889,51.4775,0
       2.083294,41.297445,0
     </coordinates>
   </LineString>
@@ -453,6 +2328,141 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo ECMGF</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      8.570555555555556,50.03333333333333,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMLD</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.764166666666667,52.308055555555555,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIIMU</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      9.278333333333334,45.44944444444444,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECHUI</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -3.560833333333333,40.47222222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLRN</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.5477777777777777,49.00972222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GEZWZ</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.19027777777777777,51.14805555555556,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo CSTTV</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -9.134166666666665,38.774166666666666,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo PHBXP</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.764166666666667,52.308055555555555,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECJGM</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -2.9105555555555553,43.301111111111105,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo CFDAT</name>
   <Style>
     <LineStyle>
@@ -463,6 +2473,51 @@
   <LineString>
     <coordinates>
       -73.74138888888889,45.46805555555556,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIDHG</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      9.988333333333333,53.63027777777778,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIFJP</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -2.9105555555555553,43.301111111111105,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECHQI</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      12.238888888888889,41.80027777777777,0
       2.083294,41.297445,0
     </coordinates>
   </LineString>
@@ -483,6 +2538,21 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo ECLZO</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.19027777777777777,51.14805555555556,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo N76062</name>
   <Style>
     <LineStyle>
@@ -493,6 +2563,21 @@
   <LineString>
     <coordinates>
       -77.45666666666666,38.94499999999999,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo FA123</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -2.9105555555555553,43.301111111111105,0
       2.083294,41.297445,0
     </coordinates>
   </LineString>
@@ -528,6 +2613,66 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo EIEBA</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -1.3277777777777777,52.83111111111111,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLZE</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      3.0869444444444447,50.56333333333333,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo DAISW</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      8.570555555555556,50.03333333333333,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo PHXRX</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      5.374444444444444,51.45,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo TCJVM</name>
   <Style>
     <LineStyle>
@@ -538,6 +2683,21 @@
   <LineString>
     <coordinates>
       29.309166666666666,40.89833333333333,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLVP</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      14.26,50.100833333333334,0
       2.083294,41.297445,0
     </coordinates>
   </LineString>
@@ -558,6 +2718,51 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo ECLRM</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -1.7480555555555557,52.45388888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLML</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.2186111111111115,39.862500000000004,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMEQ</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      1.3730555555555557,38.87277777777778,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo A7AEC</name>
   <Style>
     <LineStyle>
@@ -568,6 +2773,21 @@
   <LineString>
     <coordinates>
       51.608333333333334,25.274444444444445,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo LNDYB</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      12.29111111111111,57.66,0
       2.083294,41.297445,0
     </coordinates>
   </LineString>
@@ -588,6 +2808,96 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo DAKNQ</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      13.287777777777778,52.55972222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo DAGWE</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      9.988333333333333,53.63027777777778,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo DCARO</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.4816666666666667,39.489444444444445,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo OKNEN</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      14.26,50.100833333333334,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo LXLQB</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      6.204444444444444,49.623333333333335,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIENL</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -8.040833333333333,31.608611111111113,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo TCJHZ</name>
   <Style>
     <LineStyle>
@@ -598,6 +2908,51 @@
   <LineString>
     <coordinates>
       28.81416666666667,40.976111111111116,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIFRH</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.738888888888889,39.55166666666666,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GEZUM</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      7.215,43.665277777777774,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo CSTTK</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -9.134166666666665,38.774166666666666,0
       2.083294,41.297445,0
     </coordinates>
   </LineString>
@@ -633,6 +2988,51 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo ECLZF</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -2.37,36.84388888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECIXD</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -3.560833333333333,40.47222222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMHA</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      8.723055555555556,45.63,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo SUGCE</name>
   <Style>
     <LineStyle>
@@ -643,6 +3043,261 @@
   <LineString>
     <coordinates>
       31.413888888888888,30.11138888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo SXABE</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -1.7322222222222223,48.07194444444445,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo HBIOM</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      8.548055555555555,47.45805555555556,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GEUUY</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.4613888888888889,51.4775,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMEA</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -4.977777777777778,33.92722222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLTG</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      12.278333333333334,53.91916666666666,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo DAIRA</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      11.786111111111111,48.35388888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECJYX</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.764166666666667,52.308055555555555,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLUN</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      7.649444444444444,45.2025,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GEZPL</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.19027777777777777,51.14805555555556,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIFJN</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      13.500555555555556,52.36222222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo PHXRD</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.764166666666667,52.308055555555555,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLXV</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.738888888888889,39.55166666666666,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLOB</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -4.4991666666666665,36.675,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMGE</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -2.9105555555555553,43.301111111111105,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo OOSSW</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.484444444444445,50.90138888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GEUYB</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.19027777777777777,51.14805555555556,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo DAISE</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      8.570555555555556,50.03333333333333,0
       2.083294,41.297445,0
     </coordinates>
   </LineString>
@@ -663,6 +3318,156 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo A6AIN</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.4613888888888889,51.4775,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIFIY</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      12.238888888888889,41.80027777777777,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECHUH</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -3.560833333333333,40.47222222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECHOB</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      18.723333333333333,42.40472222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIDAE</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      7.649444444444444,45.2025,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLRY</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.3794444444444447,48.723333333333336,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIENO</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -4.4991666666666665,36.675,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIDWK</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      12.197777777777778,45.65083333333333,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECJTR</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      7.529166666666667,47.59,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMGF</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.2186111111111115,39.862500000000004,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo EIFJL</name>
   <Style>
     <LineStyle>
@@ -673,6 +3478,66 @@
   <LineString>
     <coordinates>
       5.218055555555556,60.29361111111111,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLST</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.2186111111111115,39.862500000000004,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EK111</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      7.416388888888889,47.18138888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMGY</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      20.96722222222222,52.16583333333333,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIDAM</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      0.23500000000000001,51.885,0
       2.083294,41.297445,0
     </coordinates>
   </LineString>
@@ -693,6 +3558,51 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo DAISR</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      8.570555555555556,50.03333333333333,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo CSTTN</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -9.134166666666665,38.774166666666666,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIDCJ</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      9.700277777777776,45.66888888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo OYRUP</name>
   <Style>
     <LineStyle>
@@ -708,6 +3618,36 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo ECIVJ</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      1.3730555555555557,38.87277777777778,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIEFW</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.484444444444445,50.90138888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo LVCSX</name>
   <Style>
     <LineStyle>
@@ -718,6 +3658,51 @@
   <LineString>
     <coordinates>
       -58.53583333333333,-34.82222222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo PHBXG</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.764166666666667,52.308055555555555,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo LYVEO</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -8.415277777777778,42.896388888888886,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMJZ</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -6.8213888888888885,38.89138888888889,0
       2.083294,41.297445,0
     </coordinates>
   </LineString>
@@ -753,6 +3738,156 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo HBJYL</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      6.109444444444444,46.23833333333334,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECJPF</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -3.560833333333333,40.47222222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIFJP</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.738888888888889,39.55166666666666,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo HBJXE</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      7.529166666666667,47.59,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo CNNMH</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -7.581666666666666,33.36416666666667,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLML</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.738888888888889,39.55166666666666,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECJNI</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -3.560833333333333,40.47222222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMKV</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      6.204444444444444,49.623333333333335,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECJGM</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -2.9105555555555553,43.301111111111105,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMBK</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -6.06,36.74472222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo EIFJK</name>
   <Style>
     <LineStyle>
@@ -763,6 +3898,51 @@
   <LineString>
     <coordinates>
       24.96333333333333,60.31722222222223,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMBF</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      11.078055555555554,49.49861111111111,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMLE</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      5.374444444444444,51.45,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMHB</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      9.221944444444444,48.69,0
       2.083294,41.297445,0
     </coordinates>
   </LineString>
@@ -798,6 +3978,36 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo ECLZN</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -1.6897222222222223,55.03805555555555,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo IBIXS</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      12.238888888888889,41.80027777777777,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo VPBAS</name>
   <Style>
     <LineStyle>
@@ -808,6 +4018,21 @@
   <LineString>
     <coordinates>
       37.906388888888884,55.40861111111111,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMBS</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -5.898888888888888,37.418055555555554,0
       2.083294,41.297445,0
     </coordinates>
   </LineString>
@@ -843,6 +4068,786 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo ECJTQ</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.5477777777777777,49.00972222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLQK</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -3.777222222222222,37.18861111111111,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMKX</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.3794444444444447,48.723333333333336,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLVO</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.2186111111111115,39.862500000000004,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo N483CM</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      18.26833333333333,42.561388888888885,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo FHEPB</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.5477777777777777,49.00972222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMBY</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -2.8497222222222223,53.33361111111111,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMKM</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.5580555555555556,38.282222222222224,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo DIERF</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      11.078055555555554,49.49861111111111,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo DAIRD</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      11.786111111111111,48.35388888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECJFN</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -3.560833333333333,40.47222222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo HBIOH</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      8.548055555555555,47.45805555555556,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECKCU</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.484444444444445,50.90138888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIDHT</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      1.3730555555555557,38.87277777777778,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLZF</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -2.9105555555555553,43.301111111111105,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GTTOE</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.4613888888888889,51.4775,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLAA</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      9.988333333333333,53.63027777777778,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIEPG</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -2.8497222222222223,53.33361111111111,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMKN</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      9.68361111111111,52.46027777777778,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECHHA</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      1.3730555555555557,38.87277777777778,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLXV</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.738888888888889,39.55166666666666,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo CNRGG</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -7.581666666666666,33.36416666666667,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo DAIDQ</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      8.570555555555556,50.03333333333333,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GEZWZ</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.5477777777777777,49.00972222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMGZ</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.19027777777777777,51.14805555555556,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo SXABE</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.7152777777777777,44.828611111111115,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMEQ</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -9.134166666666665,38.774166666666666,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GEZTA</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.19027777777777777,51.14805555555556,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLZE</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      12.351944444444444,45.50527777777778,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLRN</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      13.099444444444446,38.18194444444444,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECHQI</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      16.765,41.13805555555555,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECHQJ</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      16.56972222222222,48.11027777777778,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMAI</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      1.3730555555555557,38.87277777777778,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMLD</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      11.786111111111111,48.35388888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo FGUGO</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.5477777777777777,49.00972222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMJR</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      14.290833333333333,40.88444444444444,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLUN</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      5.215,43.43666666666666,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECKRN</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -8.040833333333333,31.608611111111113,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIDHG</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      12.238888888888889,41.80027777777777,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GEZUM</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      6.109444444444444,46.23833333333334,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLVP</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      6.109444444444444,46.23833333333334,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECIXD</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -3.560833333333333,40.47222222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLZZ</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      12.238888888888889,41.80027777777777,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo PHBXE</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.764166666666667,52.308055555555555,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLRM</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -3.3433333333333333,51.39666666666667,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMGY</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      1.3730555555555557,38.87277777777778,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECJYX</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -3.82,43.426944444444445,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIFIY</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -4.851944444444444,41.70611111111111,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo DAICG</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      9.221944444444444,48.69,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo CSTPA</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -9.134166666666665,38.774166666666666,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIDWK</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.2186111111111115,39.862500000000004,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GOZBW</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -1.6608333333333332,53.86611111111111,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo ECMMH</name>
   <Style>
     <LineStyle>
@@ -853,6 +4858,21 @@
   <LineString>
     <coordinates>
       -16.341666666666665,28.482777777777777,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIDHX</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      0.23500000000000001,51.885,0
       2.083294,41.297445,0
     </coordinates>
   </LineString>
@@ -873,6 +4893,51 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo ECMHS</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -13.605277777777777,28.945555555555554,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo DAISL</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      8.570555555555556,50.03333333333333,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo HALPX</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      23.692222222222224,46.78916666666667,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo HALWY</name>
   <Style>
     <LineStyle>
@@ -883,6 +4948,21 @@
   <LineString>
     <coordinates>
       23.97111111111111,56.92361111111111,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECJFT</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.738888888888889,39.55166666666666,0
       2.083294,41.297445,0
     </coordinates>
   </LineString>
@@ -903,6 +4983,81 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo DABZA</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      6.7572222222222225,51.280833333333334,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GEZIM</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      13.500555555555556,52.36222222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLQM</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      13.287777777777778,52.55972222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo DAIQK</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      7.142777777777778,50.865833333333335,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLRG</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -1.6608333333333332,53.86611111111111,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo ECMFB</name>
   <Style>
     <LineStyle>
@@ -913,6 +5068,36 @@
   <LineString>
     <coordinates>
       11.08388888888889,60.20277777777778,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMLM</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.3794444444444447,48.723333333333336,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo DASXJ</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      6.7572222222222225,51.280833333333334,0
       2.083294,41.297445,0
     </coordinates>
   </LineString>
@@ -948,6 +5133,261 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo HBIOM</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      8.548055555555555,47.45805555555556,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMEA</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      8.723055555555556,45.63,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo FGRXE</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.5477777777777777,49.00972222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GEUUT</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.4613888888888889,51.4775,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLQN</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      8.548055555555555,47.45805555555556,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo LYVEV</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.738888888888889,39.55166666666666,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECJTR</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.2186111111111115,39.862500000000004,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo 9HVMK</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      12.351944444444444,45.50527777777778,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMKV</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -1.7905555555555555,43.35638888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo CGDEJ</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.437222222222222,51.956944444444446,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECHUH</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -3.560833333333333,40.47222222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLLM</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      1.3730555555555557,38.87277777777778,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo OEIEW</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      16.56972222222222,48.11027777777778,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLLJ</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      1.3730555555555557,38.87277777777778,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIEFN</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.484444444444445,50.90138888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GEZEG</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.19027777777777777,51.14805555555556,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIDCM</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      12.238888888888889,41.80027777777777,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo A7ACD</name>
   <Style>
     <LineStyle>
@@ -958,6 +5398,81 @@
   <LineString>
     <coordinates>
       51.608333333333334,25.274444444444445,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo 7TVJM</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      3.2144444444444447,36.693888888888885,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIDAE</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -8.627500000000001,42.22916666666667,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo HBJYK</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      6.109444444444444,46.23833333333334,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo HALYG</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      19.08,50.47416666666667,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GEZBU</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      0.6933333333333334,51.57027777777778,0
       2.083294,41.297445,0
     </coordinates>
   </LineString>
@@ -978,6 +5493,51 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo GEUYC</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.4613888888888889,51.4775,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo HBJYE</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      7.529166666666667,47.59,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMBK</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      1.3730555555555557,38.87277777777778,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo A6EEH</name>
   <Style>
     <LineStyle>
@@ -988,6 +5548,96 @@
   <LineString>
     <coordinates>
       55.36,25.249166666666667,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo OELEF</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      16.56972222222222,48.11027777777778,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo OOSSK</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.484444444444445,50.90138888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLML</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      5.0811111111111105,45.72555555555556,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIEFI</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -6.27,53.421388888888885,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo HBIJQ</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      6.109444444444444,46.23833333333334,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GEZFY</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -1.6897222222222223,55.03805555555555,0
       2.083294,41.297445,0
     </coordinates>
   </LineString>
@@ -1008,6 +5658,186 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo EIDHB</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -5.898888888888888,37.418055555555554,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo FGZHY</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.3794444444444447,48.723333333333336,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIDHH</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -13.605277777777777,28.945555555555554,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECJBX</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.738888888888889,39.55166666666666,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLVS</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -4.4991666666666665,36.675,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo HALYL</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      21.62138888888889,41.961666666666666,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIDWA</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -4.594444444444444,55.50944444444445,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECJPK</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -3.560833333333333,40.47222222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLST</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.2186111111111115,39.862500000000004,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLOB</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.764166666666667,52.308055555555555,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECJTQ</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -4.851944444444444,41.70611111111111,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GEZFG</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -2.8497222222222223,53.33361111111111,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo EIDLH</name>
   <Style>
     <LineStyle>
@@ -1018,6 +5848,66 @@
   <LineString>
     <coordinates>
       -15.386666666666667,27.931944444444447,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECJGM</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -3.560833333333333,40.47222222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo CSTTN</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -9.134166666666665,38.774166666666666,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo HALYO</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      23.40833333333333,42.69499999999999,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLZO</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      12.65611111111111,55.61805555555556,0
       2.083294,41.297445,0
     </coordinates>
   </LineString>
@@ -1038,6 +5928,36 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo DAIRB</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      11.786111111111111,48.35388888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GEZIZ</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      8.723055555555556,45.63,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo ECMKT</name>
   <Style>
     <LineStyle>
@@ -1048,6 +5968,96 @@
   <LineString>
     <coordinates>
       24.96333333333333,60.31722222222223,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIFIN</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -2.275,53.35388888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMJZ</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -5.6561111111111115,42.58861111111111,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMBT</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -6.034722222222222,43.56361111111111,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECKHN</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.3794444444444447,48.723333333333336,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIENG</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      11.296944444444444,44.530833333333334,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GDBCI</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.19027777777777777,51.14805555555556,0
       2.083294,41.297445,0
     </coordinates>
   </LineString>
@@ -1068,6 +6078,126 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo GEZIK</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -2.7191666666666667,51.382777777777775,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMBS</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -5.898888888888888,37.418055555555554,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIENL</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -6.06,36.74472222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLXV</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.738888888888889,39.55166666666666,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLGV</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -3.560833333333333,40.47222222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo LYVEO</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.5477777777777777,49.00972222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo N327UP</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.4816666666666667,39.489444444444445,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIDLC</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -8.678055555555554,41.23555555555556,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo TFBRO</name>
   <Style>
     <LineStyle>
@@ -1078,6 +6208,141 @@
   <LineString>
     <coordinates>
       -22.605555555555558,63.985,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIDPG</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.738888888888889,39.55166666666666,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECJFN</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -3.560833333333333,40.47222222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLQL</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.4613888888888889,51.4775,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIDEE</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -6.27,53.421388888888885,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLVA</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      12.238888888888889,41.80027777777777,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMGF</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      8.570555555555556,50.03333333333333,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo CNNMH</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -5.921111111111111,35.73166666666667,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMKM</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -8.678055555555554,41.23555555555556,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLUN</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -2.9105555555555553,43.301111111111105,0
       2.083294,41.297445,0
     </coordinates>
   </LineString>
@@ -1098,6 +6363,156 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo ECMLE</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.2186111111111115,39.862500000000004,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIFJL</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      9.151666666666667,55.74027777777778,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECKMI</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -3.560833333333333,40.47222222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GEZUM</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      5.0811111111111105,45.72555555555556,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo HBION</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      8.548055555555555,47.45805555555556,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLZF</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.5580555555555556,38.282222222222224,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo TCICT</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      1.3730555555555557,38.87277777777778,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLAA</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -8.415277777777778,42.896388888888886,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIFJK</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.19027777777777777,51.14805555555556,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo YRBGA</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      26.084999999999997,44.571111111111115,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo TCJRF</name>
   <Style>
     <LineStyle>
@@ -1108,6 +6523,291 @@
   <LineString>
     <coordinates>
       28.81416666666667,40.976111111111116,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo DCALL</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      9.056111111111111,39.24722222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLRY</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      11.786111111111111,48.35388888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECKCU</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      12.238888888888889,41.80027777777777,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIDAM</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -6.27,53.421388888888885,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMIR</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      11.202777777777778,43.808611111111105,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo PHBXK</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.764166666666667,52.308055555555555,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIENO</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      19.261944444444445,47.43944444444444,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GEUUG</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.4613888888888889,51.4775,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECHHA</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      8.548055555555555,47.45805555555556,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMHB</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.19027777777777777,51.14805555555556,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMFL</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.3794444444444447,48.723333333333336,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLVP</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -3.560833333333333,40.47222222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLUT</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.2186111111111115,39.862500000000004,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECJFF</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      18.26833333333333,42.561388888888885,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLZE</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -4.4991666666666665,36.675,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo FGKXR</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.5477777777777777,49.00972222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLRG</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.738888888888889,39.55166666666666,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo DAISG</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      8.570555555555556,50.03333333333333,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIEIB</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      12.238888888888889,41.80027777777777,0
       2.083294,41.297445,0
     </coordinates>
   </LineString>
@@ -1128,6 +6828,36 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo EIEPG</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.112777777777778,49.45444444444445,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMKX</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      6.7572222222222225,51.280833333333334,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo VPBZA</name>
   <Style>
     <LineStyle>
@@ -1138,6 +6868,351 @@
   <LineString>
     <coordinates>
       37.41305555555555,55.972500000000004,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIFJM</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      12.65611111111111,55.61805555555556,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLZN</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      14.26,50.100833333333334,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLQK</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -6.27,53.421388888888885,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLZS</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      9.517777777777779,40.89861111111111,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECHTD</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      1.3730555555555557,38.87277777777778,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLML</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.2186111111111115,39.862500000000004,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMGE</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.3683333333333333,51.874722222222225,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMGY</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -3.777222222222222,37.18861111111111,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIDHX</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      9.700277777777776,45.66888888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLRM</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      11.296944444444444,44.530833333333334,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECHFK</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.738888888888889,39.55166666666666,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIDAE</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      1.3730555555555557,38.87277777777778,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo CSTTS</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -9.134166666666665,38.774166666666666,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIFIY</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      12.197777777777778,45.65083333333333,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIDCJ</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      13.500555555555556,52.36222222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLVO</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -8.377222222222223,43.301944444444445,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLVB</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -9.134166666666665,38.774166666666666,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo SXABE</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.484444444444445,50.90138888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMEQ</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.3794444444444447,48.723333333333336,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIDWK</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      12.238888888888889,41.80027777777777,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMJR</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      8.723055555555556,45.63,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMFK</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.2186111111111115,39.862500000000004,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMLM</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -8.627500000000001,42.22916666666667,0
       2.083294,41.297445,0
     </coordinates>
   </LineString>
@@ -1158,6 +7233,141 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo ECMEA</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -5.898888888888888,37.418055555555554,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECJTR</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.738888888888889,39.55166666666666,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GEZTA</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      2.5477777777777777,49.00972222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLSA</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -8.678055555555554,41.23555555555556,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMGZ</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.764166666666667,52.308055555555555,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo SXDVV</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      23.944444444444446,37.93666666666666,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMKV</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      10.395555555555555,43.68277777777777,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECJYX</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      10.887777777777778,45.396388888888886,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIDHT</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      0.23500000000000001,51.885,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo OYRUP</name>
   <Style>
     <LineStyle>
@@ -1173,6 +7383,36 @@
   </LineString>
 </Placemark>
 <Placemark>
+  <name>Vuelo GEZWZ</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.19027777777777777,51.14805555555556,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo LYVEV</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      12.351944444444444,45.50527777777778,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
   <name>Vuelo YLPSH</name>
   <Style>
     <LineStyle>
@@ -1183,6 +7423,156 @@
   <LineString>
     <coordinates>
       -22.605555555555558,63.985,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo EIDHG</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      7.142777777777778,50.865833333333335,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLZZ</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.19027777777777777,51.14805555555556,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMBK</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      9.056111111111111,39.24722222222222,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo GEZDJ</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.3683333333333333,51.874722222222225,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECKHN</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      4.2186111111111115,39.862500000000004,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLZO</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      1.3730555555555557,38.87277777777778,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECHQI</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      7.215,43.665277777777774,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECMLD</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -2.275,53.35388888888889,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECLTG</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -0.002777777777777778,43.18555555555555,0
+      2.083294,41.297445,0
+    </coordinates>
+  </LineString>
+</Placemark>
+<Placemark>
+  <name>Vuelo ECHQJ</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      1.3730555555555557,38.87277777777778,0
       2.083294,41.297445,0
     </coordinates>
   </LineString>

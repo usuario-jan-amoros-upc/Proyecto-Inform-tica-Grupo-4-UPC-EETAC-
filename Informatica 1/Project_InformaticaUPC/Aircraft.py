@@ -1,8 +1,9 @@
+import os
 import matplotlib.pyplot as plt
 
 
 class Aircraft:
-    def __init__(self, aircraft_id, origin, arrival_time, airline):  # Definimos la clase.
+    def __init__(self, aircraft_id, airline, origin, arrival_time):  # Definimos la clase.
         self.aircraft_id = aircraft_id
         self.airline = airline
         self.origin = origin
@@ -14,12 +15,11 @@ def LoadArrivals(filename):
 
     try:
         f = open(filename, "r")
-        f.readline()
-        lineas = f.readline()  # Leemos todas las líneas para recorrerlas por índice
+        lineas = f.readlines()  # Leemos todas las líneas para recorrerlas por índice
+        f.close()
 
-        while lineas != "" :
-            parts = lineas.rstrip().split()
-
+        for i in range(1, len(lineas)):
+            parts = lineas[i].split()
 
             if len(parts) == 4:  # Si no tiene la estructura adecuada salta de linea.
                 id_aircraft = parts[0]
@@ -27,10 +27,8 @@ def LoadArrivals(filename):
                 time = parts[2]
                 airline = parts[3]
 
-                nuevo_avion = Aircraft(id_aircraft, origin, time, airline)  # Creamos el objeto Aircraft y lo añadimos en una lista.
+                nuevo_avion = Aircraft(id_aircraft, airline, origin,time)  # Creamos el objeto Aircraft y lo añadimos en una lista.
                 aircrafts.append(nuevo_avion)  # Si el objeto no tiene 4 componentes lo ignora.
-            lineas = f.readline()
-        f.close()
 
     except:
         print(f"El archivo {filename} no se pudo abrir.")
@@ -73,11 +71,11 @@ def SaveFlights(aircrafts, filename):
         return []
     try:
         f = open(filename, "w") #Abrimos y que el programa escriba el documento.
-        f.write("aircraft_id origin arrival_time airline\n") #Definimos cabecera para mantener el formato.
+        f.write("aircraft_id airline origin arrival_time") #Definimos cabecera para mantener el formato.
 
         for i in range(len(aircrafts)):
             avion = aircrafts[i]
-            linea = (f"{avion.aircraft_id} {avion.origin} {avion.arrival_time} {avion.airline}\n")
+            linea = (f"{avion.aircraft_id} {avion.airline} {avion.origin} {avion.arrival_time} \n")
             f.write(linea) #Para que el programa nos escriba la linea.
 
         f.close()
@@ -85,7 +83,6 @@ def SaveFlights(aircrafts, filename):
 
     except:
         print(f"Error, no se ha podido guardar {filename}.")
-
 
 def PlotAirlines(aircrafts):
     if len(aircrafts) == 0:
@@ -97,7 +94,7 @@ def PlotAirlines(aircrafts):
 
     for i in range(len(aircrafts)):
         avion = aircrafts[i]
-        nombre_actual_aerolinea = avion.airline.strip()
+        nombre_actual_aerolinea = avion.airline
 
         encontrado = False
         j = 0
@@ -115,16 +112,10 @@ def PlotAirlines(aircrafts):
             nombres.append(nombre_actual_aerolinea)
             cantidades.append(1)
 
-    plt.figure(figsize=(10,6))
     plt.bar(nombres, cantidades, color='orange')
     plt.title("Vuelos por aerolínea")
-    plt.xticks(rotation=90, fontsize=8)
-    plt.xlabel("Aerolínea")
-    plt.ylabel("Cantidad")
-    plt.tight_layout()
-    print(f"Aerolineas encontradas:{nombres}")
+    plt.xticks(rotation=45)
     plt.show()
-
 
 def PlotFlightsType(aircrafts,airports):
     if len(aircrafts) == 0:
@@ -151,13 +142,12 @@ def PlotFlightsType(aircrafts,airports):
              else:
                  j = j + 1
 
-    categoria = ['Vuelos Totales']
-    plt.bar(categoria, [vuelos_schengen], color='green', label='Schengen')
-    plt.bar(categoria, [vuelos_no_schengen], bottom=[vuelos_schengen], color='red', label='No Schengen')
+    etiquetas = ['Schengen', 'No Schengen']
+    valores = [vuelos_schengen, vuelos_no_schengen]
+    plt.bar(etiquetas, valores, color=['green', 'red'])
     plt.title("Vuelos según origen (Schengen vs No Schengen)")
-    plt.ylabel("Cantidad de vuelos")
-    plt.legend() #Importante para saber qué color es cada uno
     plt.show()
+
 
 def MapFlights(aircrafts, airports):
     f = open("flights_map.kml", "w")
@@ -211,6 +201,7 @@ def MapFlights(aircrafts, airports):
     f.write('</kml>\n')
     f.close()
     print("Archivo flights_map.kml generado con éxito.")
+    os.startfile("flights_map.kml")
 
 
 import math
@@ -254,12 +245,15 @@ def LongDistanceArrivals(aircrafts, airports):
 if __name__ == "__main__":
     aircrafts = LoadArrivals("arrivals.txt") #Cargamos los vuelos del documento.
 
+    PlotArrivals(aircrafts)
+
     from Airport import LoadAirports, SetSchengen #Marcamos las funciones que ha de cojer de Airport.py.
     airports = LoadAirports("airports.txt")
 
     for i in range(len(airports)):
         SetSchengen(airports[i])
 
+    PlotFlightsType(aircrafts, airports) #Probamos tanto las graficas de Plot como la del Maps programadas.
     MapFlights(aircrafts, airports)
 
 
@@ -268,22 +262,8 @@ if __name__ == "__main__":
     for i in range(len(inspeccion)):
         print(inspeccion[i].aircraft_id, "desde", inspeccion[i].origin)
 
-    MapFlights(inspeccion, airports) #Llamamos de nuevo la funcion MapFlights.
+    MapFlights(inspeccion, airports) #Llamamos de nuevo la funcion MapFlights y
     print("Archivo KML de LARGA DISTANCIA generado con éxito.")
-
-
-    SaveFlights(aircrafts, "vuelos_salida.txt")
-    print("Archivo 'vuelos_salida.txt' guardado y todas las gráficas generadas.")
-
-
-    PlotAirlines(aircrafts)
-
-    PlotArrivals(aircrafts)
-
-    PlotFlightsType(aircrafts,airports)
-
-
-
 
 
 

@@ -1,3 +1,4 @@
+import os
 class Airport:
     def __init__(self, ICAOcode, latitude, longitude):
         self.ICAOcode = ICAOcode
@@ -55,11 +56,12 @@ def LoadAirports(filename):
     airports = []
     try:
         f = open(filename, "r")
-        f.readline()
-        lineas = f.readline()
+        lineas = f.readlines()
+        f.close()
 
-        while lineas != "":
-            datos = lineas.split()
+
+        for i in range(1, len(lineas)):
+            datos = lineas[i].split()
             if len(datos) == 3:
                 codigo = datos[0]
                 lat_decimal = ConvertCoordinates(datos[1])
@@ -68,8 +70,6 @@ def LoadAirports(filename):
                 nuevo = Airport(codigo, lat_decimal, lon_decimal)
                 SetSchengen(nuevo)
                 airports.append(nuevo)
-            lineas = f.readline()
-        f.close()
     except:
         print("Error al leer el archivo de aeropuertos.")
 
@@ -195,4 +195,5 @@ def MapAirports(airports):
     f.close()
 
     print("Archivo generado con éxito.")
+    os.startfile("airports_map.kml")
 
