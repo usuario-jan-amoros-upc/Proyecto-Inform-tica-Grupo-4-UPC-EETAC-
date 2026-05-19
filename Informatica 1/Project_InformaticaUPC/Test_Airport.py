@@ -51,5 +51,3 @@ else:
 print(f"Aeropuertos en la lista: {len(lista)}")
 PlotAirports(lista)
 MapAirports(lista)
-
-patata
