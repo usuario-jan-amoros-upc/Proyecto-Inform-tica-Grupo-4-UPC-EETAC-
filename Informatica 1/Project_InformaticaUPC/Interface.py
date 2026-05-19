@@ -9,7 +9,7 @@ from LEBL import *
 root = tk.Tk()
 root.title("Gestor de Aeropuertos - INFO1 - Versión 3")
 root.geometry("1180x780")
-root.configure(bg="#f8f9fa")
+root.configure(bg="#F8F9FA")
 
 
 lista_airports = []
@@ -285,7 +285,7 @@ tk.Button(
     command=accion_cargar,
     width=34,
     height=1,
-    bg="#dbeafe",
+    bg="#A7C7E7",
     font=("Arial", 10, "bold")
 ).pack(pady=3)
 
@@ -295,7 +295,7 @@ tk.Button(
     command=accion_cargar_LEBL,
     width=34,
     height=1,
-    bg="#dbeafe",
+    bg="#A7C7E7",
     font=("Arial", 10, "bold")
 ).pack(pady=3)
 
@@ -394,102 +394,23 @@ frame_centro.grid(row=0, column=1, padx=12, pady=0, sticky="n")
 
 tk.Label(
     frame_centro,
-    text="--- GRÁFICAS ---",
-    font=("Arial", 12, "bold"),
-    bg="#f8f9fa"
-).pack(pady=5)
-
-tk.Button(
-    frame_centro,
-    text="Gráfica Aeropuertos",
-    command=accion_grafica_airports,
-    width=32,
-    height=1,
-    font=("Arial", 10, "bold")
-).pack(pady=3)
-
-tk.Button(
-    frame_centro,
-    text="Gráfica Llegadas",
-    command=accion_grafica_llegadas,
-    width=32,
-    height=1,
-    font=("Arial", 10, "bold")
-).pack(pady=3)
-
-tk.Button(
-    frame_centro,
-    text="Gráfica Aerolíneas",
-    command=accion_grafica_airlines,
-    width=32,
-    height=1,
-    font=("Arial", 10, "bold")
-).pack(pady=3)
-
-tk.Button(
-    frame_centro,
-    text="Gráfica Schengen Vuelos",
-    command=accion_grafica_tipo_vuelos,
-    width=32,
-    height=1,
-    font=("Arial", 10, "bold")
-).pack(pady=3)
-
-
-tk.Label(
-    frame_centro,
-    text="--- MAPAS GOOGLE EARTH ---",
-    font=("Arial", 12, "bold"),
-    bg="#f8f9fa"
-).pack(pady=15)
-
-tk.Button(
-    frame_centro,
-    text="Mapa Aeropuertos Google Earth",
-    command=accion_mapa_airports,
-    width=32,
-    height=1,
-    bg="#bbf7d0",
-    font=("Arial", 10, "bold")
-).pack(pady=3)
-
-tk.Button(
-    frame_centro,
-    text="Mapa Vuelos Google Earth",
-    command=accion_mapa_vuelos,
-    width=32,
-    height=1,
-    bg="#bbf7d0",
-    font=("Arial", 10, "bold")
-).pack(pady=3)
-
-
-# ---------------- COLUMNA DERECHA ----------------
-# Pantallas de datos visibles desde que se abre la interfaz.
-
-frame_derecha = tk.Frame(frame_principal, bg="#f8f9fa")
-frame_derecha.grid(row=0, column=2, padx=12, pady=0, sticky="n")
-
-
-tk.Label(
-    frame_derecha,
     text="Vuelos cargados / añadidos",
     font=("Arial", 12, "bold"),
     bg="#f8f9fa"
 ).pack(pady=5)
 
-caja_vuelos = tk.Text(frame_derecha, width=57, height=16, font=("Arial", 10))
+caja_vuelos = tk.Text(frame_centro, width=57, height=16, font=("Arial", 10))
 caja_vuelos.pack(pady=3)
 
 
 tk.Label(
-    frame_derecha,
+    frame_centro,
     text="Ocupación de puertas",
     font=("Arial", 12, "bold"),
     bg="#f8f9fa"
 ).pack(pady=8)
 
-caja_ocupacion = tk.Text(frame_derecha, width=57, height=18, font=("Arial", 10))
+caja_ocupacion = tk.Text(frame_centro, width=57, height=18, font=("Arial", 10))
 caja_ocupacion.pack(pady=3)
 
 
@@ -497,7 +418,7 @@ etiqueta_estado = tk.Label(
     root,
     text="Estado: esperando cargar archivos.",
     bg="#f8f9fa",
-    fg="#374151",
+    fg="#2F3E46",
     font=("Arial", 10, "bold")
 )
 etiqueta_estado.pack(pady=6)
@@ -507,11 +428,94 @@ tk.Button(
     root,
     text="SALIR",
     command=root.destroy,
-    fg="red",
+    fg="#2F3E46",
+    bg="#F4A6A6",
     width=34,
     height=1,
     font=("Arial", 10, "bold")
 ).pack(pady=4)
+
+# ---------------- COLUMNA DERECHA ----------------
+# Pantallas de datos visibles desde que se abre la interfaz.
+
+frame_derecha = tk.Frame(frame_principal, bg="#f8f9fa")
+frame_derecha.grid(row=0, column=2, padx=12, pady=0, sticky="n")
+
+tk.Label(
+    frame_derecha,
+    text="--- GRÁFICAS ---",
+    font=("Arial", 12, "bold"),
+    bg="#f8f9fa"
+).pack(pady=5)
+
+tk.Button(
+    frame_derecha,
+    text="Gráfica Aeropuertos",
+    command=accion_grafica_airports,
+    width=32,
+    height=1,
+    bg="#D7C7E8",
+    font=("Arial", 10, "bold")
+).pack(pady=3)
+
+tk.Button(
+    frame_derecha,
+    text="Gráfica Llegadas",
+    command=accion_grafica_llegadas,
+    width=32,
+    height=1,
+    bg="#D7C7E8",
+    font=("Arial", 10, "bold")
+).pack(pady=3)
+
+tk.Button(
+    frame_derecha,
+    text="Gráfica Aerolíneas",
+    command=accion_grafica_airlines,
+    width=32,
+    height=1,
+    bg="#D7C7E8",
+    font=("Arial", 10, "bold")
+).pack(pady=3)
+
+tk.Button(
+    frame_derecha,
+    text="Gráfica Schengen Vuelos",
+    command=accion_grafica_tipo_vuelos,
+    width=32,
+    height=1,
+    bg="#D7C7E8",
+    font=("Arial", 10, "bold")
+).pack(pady=3)
+
+
+tk.Label(
+    frame_derecha,
+    text="--- MAPAS GOOGLE EARTH ---",
+    font=("Arial", 12, "bold"),
+    bg="#f8f9fa"
+).pack(pady=15)
+
+tk.Button(
+    frame_derecha,
+    text="Mapa Aeropuertos Google Earth",
+    command=accion_mapa_airports,
+    width=32,
+    height=1,
+    bg="#F6C6A8",
+    font=("Arial", 10, "bold")
+).pack(pady=3)
+
+tk.Button(
+    frame_derecha,
+    text="Mapa Vuelos Google Earth",
+    command=accion_mapa_vuelos,
+    width=32,
+    height=1,
+    bg="#F6C6A8",
+    font=("Arial", 10, "bold")
+).pack(pady=3)
+
 
 
 # Esto hace que la pantalla de vuelos aparezca ya con cabecera al abrir el programa.
