@@ -57,7 +57,9 @@ def PlotArrivals(aircrafts):
     for i in range(24):  # Creamos una lista que vaya del 1 hasta el 23.
         eje_x.append(i)
 
-    plt.bar(eje_x, horas, color='blue')  # Gráfico de barras
+    plt.bar(eje_x, horas, color='#9BB8CD')# Gráfico de barras
+    plt.gcf().set_facecolor("#FAF3E0")
+    plt.gca().set_facecolor("#FAF3E0")
     plt.title("Llegadas por hora a Barcelona (LEBL)")
     plt.xlabel("Hora del día")
     plt.ylabel("Número de vuelos")
@@ -112,9 +114,11 @@ def PlotAirlines(aircrafts):
             nombres.append(nombre_actual_aerolinea)
             cantidades.append(1)
 
-    plt.bar(nombres, cantidades, color='orange')
+    plt.bar(nombres, cantidades, color='#FFD6BA')
     plt.title("Vuelos por aerolínea")
     plt.xticks(rotation=45)
+    plt.gcf().set_facecolor("#FAF3E0")
+    plt.gca().set_facecolor("#FAF3E0")
     plt.show()
 
 def PlotFlightsType(aircrafts,airports):
@@ -144,8 +148,10 @@ def PlotFlightsType(aircrafts,airports):
 
     etiquetas = ['Schengen', 'No Schengen']
     valores = [vuelos_schengen, vuelos_no_schengen]
-    plt.bar(etiquetas, valores, color=['green', 'red'])
+    plt.bar(etiquetas, valores, color=['#BEE3DB', '#F5B7B1'])
     plt.title("Vuelos según origen (Schengen vs No Schengen)")
+    plt.gcf().set_facecolor("#FAF3E0")
+    plt.gca().set_facecolor("#FAF3E0")
     plt.show()
 
 

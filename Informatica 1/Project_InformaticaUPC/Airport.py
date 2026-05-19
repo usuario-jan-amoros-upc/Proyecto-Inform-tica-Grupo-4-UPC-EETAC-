@@ -144,12 +144,14 @@ def PlotAirports(airports):
 
     etiqueta = ["Aeropuertos"]
 
-    plt.bar(etiqueta, [no_schengen], color="orange", label="Non-Schengen")
+    plt.bar(etiqueta, [no_schengen], color="#FFD6BA", label="Non-Schengen")
 
-    plt.bar(etiqueta, [es_schengen], bottom=[no_schengen], color="blue", label="Schengen")
+    plt.bar(etiqueta, [es_schengen], bottom=[no_schengen], color="#9BB8CD", label="Schengen")
 
     plt.title('Distribución de Aeropuertos')
     plt.ylabel('Cantidad')
+    plt.gca().set_facecolor("#FAF3E0")
+    plt.gcf().set_facecolor("#FAF3E0")
     plt.legend()
     plt.show()
 
