@@ -1,208 +1,217 @@
+from Airport import IsSchengenAirport
+
+
 class Gate:
-    def __init__(self,name):
-        self.name=name
-        self.occupied=False #Al principo todas libres.
-        self.aircraft_id="" #Si esta libre no hay id aun.
+    def __init__(self, name):
+        self.name = name
+        self.occupied = False
+        self.aircraft_id = ""
+
 
 class BoardingArea:
-    def __init__(self,name,area_type):
-        self.name=name
-        self.type=area_type  #Schengen o no schengen.
-        self.gates=[]  #Guardamos objetod de la clase Gate.
+    def __init__(self, name, area_type):
+        self.name = name
+        self.type = area_type
+        self.gates = []  # each element is a Gate
 
-class terminal:
-    def __init__(self,name):
-        self.name=name
-        self.boarding_areas=[] #Lista de BoardingArea
-        self.airlines=[] #Lista de aerolineas (codigo ICAO).
+
+class Terminal:
+    def __init__(self, name):
+        self.name = name
+        self.boarding_areas = []  # each element is a BoardingArea
+        self.airlines = []  # each element is an airline ICAO code
+
+
+terminal = Terminal
+
 
 class BarcelonaAP:
-    def __init__(self,code):
-        self.code=code
-        self.terminals=[]  #Lista de objetos de terminal.
+    def __init__(self, code):
+        self.code = code
+        self.terminals = []  # each element is a Terminal
 
-import os
 
-def SetGates(area,init_gate,end_gate,prefix):  #Vamos a utilizar esta funcion con la intencion de crear y asignar objetos Gate a un objeto BoardingArea.
-    if end_gate<init_gate: #Comprobamos error el final no puede ser ni igual ni menos al inicio.
+def SetGates(area, init_gate, end_gate, prefix):
+    if end_gate <= init_gate:
         return -1
 
-    area.gates=[] #Vaciamos la lista
-
-    for i in range(init_gate,end_gate+1):
-        nombre_puerta=f"{prefix}{i}"
-
-        nueva_puerta=Gate(nombre_puerta) #Usamos la clase Gate para determinar que tiene la puerta.
-        area.gates.append(nueva_puerta) #La guardamos
+    area.gates = []
+    i = init_gate
+    while i <= end_gate:
+        area.gates.append(Gate(prefix + str(i)))
+        i = i + 1
     return 0
 
-def LoadAirlines(terminal, terminal_name): #Leemos el archivo _Airlines.txt y guarda los codigos ICAO en la lista de las aerolineas de la terminal.
-    nombre_archivo=terminal_name+"_Airlines.txt"
+
+def LoadAirlines(terminal, terminal_name):
+    filename = terminal_name + "_Airlines.txt"
 
     try:
-        f=open(nombre_archivo,"r")
-        terminal.airlines=[] #Vaciamos la lista
-        linea=f.readline()
-
-        while linea != "":
-            linea=linea.strip() #Quitamos el espacio y el salto de linea.
-
-            if linea !="":
-                trozos=linea.split("\t") #Cortamos la linea por el tabulador
-                if len(trozos)==2:
-                    codigo=trozos[1] #ICAOcode
-                    terminal.airlines.append(codigo)
-            linea=f.readline()
+        f = open(filename, "r")
+        lines = f.readlines()
         f.close()
-        return 0
     except:
         return -1
 
+    terminal.airlines = []
+    i = 0
+    while i < len(lines):
+        parts = lines[i].strip().split("\t")
+        if len(parts) == 2:
+            terminal.airlines.append(parts[1])
+        i = i + 1
+    return 0
 
-def LoadAirportsStructure(filename):
+
+def LoadAirportStructure(filename):
     try:
-        f=open(filename,"r")
-        linea=f.readline()
-        partes=linea.split()
-        codigo_icao=partes[0]
-
-        bcn=BarcelonaAP(codigo_icao) #Creamos el objeto principal
-
-        linea=f.readline()
-        while linea != "":
-            linea=linea.strip()
-            if linea !="":
-                partes=linea.split()
-
-                if partes[0]=="Terminal":
-                    nombre_terminal=partes[1]
-                    terminal_actual=terminal(nombre_terminal)
-                    bcn.terminals.append(terminal_actual)
-
-
-                    LoadAirlines(terminal_actual,nombre_terminal) #Llamamos a la funcion que ya hicimos para cargar sus aerolineas.
-                elif partes[0]=="Area":
-                    nombre_area=partes[1]
-                    tipo_area=partes[2]
-                    inicio=int(partes[4])
-                    final=int(partes[6])
-
-                    area_nueva=BoardingArea(nombre_area,tipo_area)
-
-                    prefijo_puertas=terminal_actual.name + nombre_area #Creamos el prefijo para las puertas.
-                    SetGates(area_nueva,inicio,final,prefijo_puertas) #Llamamos la funcion para crear puerta
-                    terminal_actual.boarding_areas.append(area_nueva) #Guardamos aera en termianla actual
-
-                linea=f.readline()
-
+        f = open(filename, "r")
+        lines = f.readlines()
         f.close()
-        return bcn
     except:
-        return-1
+        return -1
+
+    if len(lines) == 0:
+        return -1
+
+    first_line = lines[0].split()
+    if len(first_line) < 1:
+        return -1
+
+    bcn = BarcelonaAP(first_line[0])
+    current_terminal = ""
+    i = 1
+
+    while i < len(lines):
+        parts = lines[i].split()
+
+        if len(parts) > 0 and parts[0] == "Terminal":
+            current_terminal = Terminal(parts[1])
+            LoadAirlines(current_terminal, parts[1])
+            bcn.terminals.append(current_terminal)
+
+        elif len(parts) >= 7 and parts[0] == "Area" and current_terminal != "":
+            area = BoardingArea(parts[1], parts[2])
+            prefix = current_terminal.name + area.name + "G"
+            SetGates(area, int(parts[4]), int(parts[6]), prefix)
+            current_terminal.boarding_areas.append(area)
+
+        i = i + 1
+
+    return bcn
+
+
+LoadAirportsStructure = LoadAirportStructure
 
 
 def GateOccupancy(bcn):
-    lista_informe=[]
+    occupancy = []
+    t = 0
 
-    t=0
-    while t < len(bcn.terminals): #Recorremos todas las terminales
-        terminal=bcn.terminals[t]
+    while t < len(bcn.terminals):
+        term = bcn.terminals[t]
+        a = 0
 
-        a=0
-        while a<len(terminal.boarding_areas): #Por cada terminal recorremos sus areas
-            area=terminal.boarding_areas[a]
+        while a < len(term.boarding_areas):
+            area = term.boarding_areas[a]
+            g = 0
 
-            g=0
-            while g<len(area.gates): #Por cada area recorremos sus puertas
-                puerta=area.gates[g]
+            while g < len(area.gates):
+                gate = area.gates[g]
+                occupancy.append([term.name, area.name, gate.name, gate.occupied, gate.aircraft_id])
+                g = g + 1
 
-                nombre=puerta.name #Determinamos la informacion de cada puerta
-                estado=puerta.occupied #Verdadero o falso
-                avion=puerta.aircraft_id #El id del que la esta ocupando
+            a = a + 1
 
-                datos_puerta=[nombre,estado,avion]
+        t = t + 1
 
-                lista_informe.append(datos_puerta)
-                g=g+1
-            a=a+1
-        t=t+1
-    return lista_informe
+    return occupancy
 
 
-def IsAirlineInTerminal(terminal, nombre):
-    if nombre == "":    # Si el nombre de la aerolínea es una cadena vacía, devuelve False y código de error -1
-        return False, -1
-
-    if len(terminal.airlines) == 0:   # Si la lista de aerolíneas de la terminal no existe o está vacía
+def IsAirlineInTerminal(terminal, name):
+    if name == "" or len(terminal.airlines) == 0:
         return False
 
-    encontrada = False
     i = 0
-    # Recorremos la lista de aerolíneas de la terminal buscando coincidencia
-    while i < len(terminal.airlines) and encontrada == False:
-        if terminal.airlines[i] == nombre:
-            encontrada = True
-        i += 1
+    while i < len(terminal.airlines):
+        if terminal.airlines[i] == name:
+            return True
+        i = i + 1
 
-    return encontrada
+    return False
 
 
 def SearchTerminal(bcn, name):
-    nombre_terminal = ""    #iniciamo el nombre de la terminal como una lista vacia, asi si no encontramos la aerolínea devolveremos una cadena nula
-    t = 0    #índice para recorrer la lista de terminales del aeropuerto
-
-    while t < len(bcn.terminals) and nombre_terminal == "":  #bucle que se usará mientras no hayamos revisado todas las terminales o no la hayamos encontrado ya
-        encontrada = IsAirlineInTerminal(bcn.terminals[t], name)   #llamamos a la función anterior que nos devolverá True si la aerolinea está en la terminal
-
-        if encontrada == True:          #si encontramos la terminal correcta damos su nombre
-            nombre_terminal = bcn.terminals[t].name
+    t = 0
+    while t < len(bcn.terminals):
+        if IsAirlineInTerminal(bcn.terminals[t], name) == True:
+            return bcn.terminals[t].name
         t = t + 1
 
-    return nombre_terminal
+    return ""
 
 
 def AssignGate(bcn, aircraft):
-    nombre_term_correcta = SearchTerminal(bcn, aircraft.airline)   #para ver en que terminal va la aerolinea del avión
-
-    if nombre_term_correcta == "":          #Si la aerolínea no está en ninguna terminal devolvemos error
+    terminal_name = SearchTerminal(bcn, aircraft.airline)
+    if terminal_name == "":
         return -1
 
+    is_schengen = IsSchengenAirport(aircraft.origin)
     t = 0
-    encontrada = False
-    while t < len(bcn.terminals) and encontrada == False:  #buscamos la terminal dentro de las terminales de barcelona
-        if bcn.terminals[t].name == nombre_term_correcta:
-            term_obj = bcn.terminals[t]
-            encontrada = True
+
+    while t < len(bcn.terminals):
+        term = bcn.terminals[t]
+
+        if term.name == terminal_name:
+            a = 0
+            while a < len(term.boarding_areas):
+                area = term.boarding_areas[a]
+
+                if (is_schengen == True and area.type == "Schengen") or (is_schengen == False and area.type == "non-Schengen"):
+                    g = 0
+                    while g < len(area.gates):
+                        gate = area.gates[g]
+                        if gate.occupied == False:
+                            gate.occupied = True
+                            gate.aircraft_id = aircraft.aircraft_id
+                            return 0
+                        g = g + 1
+
+                a = a + 1
+
         t = t + 1
 
-    a = 0
-    puerta_asignada = False
-    while a < len(term_obj.boarding_areas) and puerta_asignada == False:     #buscamos la zona de embarque dentro de esa terminal
-        area = term_obj.boarding_areas[a]
+    return -2
 
-        # Comprobamos si el área coincide con el tipo de vuelo del avión
-        if (aircraft.schengen == True and area.type == "Schengen") or  (aircraft.schengen == False and area.type == "non-Schengen"):
+
+def ResetGates(bcn):
+    t = 0
+    while t < len(bcn.terminals):
+        a = 0
+        while a < len(bcn.terminals[t].boarding_areas):
             g = 0
-            while g < len(area.gates) and puerta_asignada == False:     #buscamos la primera puerta libre
-                puerta = area.gates[g]
-
-                if puerta.occupied == False:
-                    puerta.occupied = True
-                    puerta.aircraft_id = aircraft.id
-                    puerta_asignada = True
+            while g < len(bcn.terminals[t].boarding_areas[a].gates):
+                gate = bcn.terminals[t].boarding_areas[a].gates[g]
+                gate.occupied = False
+                gate.aircraft_id = ""
                 g = g + 1
-        a = a + 1
-
-    if puerta_asignada == False:
-        return -2                        # Código de error si no hay puertas libres
-
+            a = a + 1
+        t = t + 1
+    return 0
 
 
+if __name__ == "__main__":
+    from Aircraft import LoadArrivals
 
+    bcn = LoadAirportStructure("LEBL.txt")
+    aircrafts = LoadArrivals("Arrivals.txt")
 
-
-
-
-
-
-
+    if bcn != -1:
+        i = 0
+        assigned = 0
+        while i < len(aircrafts):
+            if AssignGate(bcn, aircrafts[i]) == 0:
+                assigned = assigned + 1
+            i = i + 1
+        print("Puertas asignadas:", assigned)
+        print("Total puertas:", len(GateOccupancy(bcn)))
