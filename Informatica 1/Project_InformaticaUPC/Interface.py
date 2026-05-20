@@ -426,7 +426,7 @@ tk.Button(
     command=accion_cargar_LEBL,
     width=34,
     height=1,
-    bg="#A8DADC",
+    bg="#A8DADc",
     font=("Arial", 10, "bold")
 ).pack(pady=3)
 
