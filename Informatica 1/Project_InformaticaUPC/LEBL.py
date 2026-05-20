@@ -219,7 +219,7 @@ def AssignGate(bcn, aircraft):
 
 def ResetGates(bcn):
     t = 0
-    # Tres bucles anidados para resetear todo el aeropuerto y dejarlo vacío (a cero)
+    # Tres bucles anidados para resetear
     while t < len(bcn.terminals):
         a = 0
         while a < len(bcn.terminals[t].boarding_areas):
