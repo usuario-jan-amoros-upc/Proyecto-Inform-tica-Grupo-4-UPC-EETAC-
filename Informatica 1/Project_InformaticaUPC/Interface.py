@@ -8,7 +8,7 @@ from LEBL import *
 
 root = tk.Tk()
 root.title("Gestor de Aeropuertos - INFO1 - Versión 4")
-root.geometry("1520x970")
+root.geometry("1520x1010")
 root.configure(bg="#FAF3E0")
 
 
@@ -66,7 +66,6 @@ def actualizar_ocupacion_hora(valor):
     # Si todavía no hemos calculado la ocupación por horas, avisamos.
     if len(lista_ocupacion_horas) == 0:
         caja_ocupacion.insert(tk.END, "Primero debes asignar puertas por horas.\n")
-        dibujar_grafica_ocupacion_diaria(hora)
 
     # Si ya existe la ocupación por horas, mostramos la hora seleccionada.
     else:
@@ -77,8 +76,6 @@ def actualizar_ocupacion_hora(valor):
             caja_ocupacion.insert(tk.END, ocupacion[i] + "\n")
             i = i + 1
 
-        # Además actualizamos el gráfico de ocupación de T1 y T2.
-        dibujar_grafica_ocupacion_diaria(hora)
 
 
 # Esta función llamará más adelante a la función que asigna puertas teniendo en cuenta las horas.
@@ -179,34 +176,16 @@ def actualizar_ocupacion(nombre_terminal):
 
 # --- FUNCIÓN INDEPENDIENTE PARA EL MAPA GRÁFICO (Para los botones naranjas) ---
 def mostrar_mapa_grafico(nombre_terminal):
+    # Esta gráfica es la misma que había antes, pero ahora se dibuja dentro
+    # de la pantalla de ocupación de puertas de la interfaz.
     if bcn == "" or bcn == -1:
         messagebox.showwarning("Error", "Primero debes cargar la estructura.")
     else:
-        ventana_mapa = tk.Toplevel()
-        ventana_mapa.transient(root)
-        ventana_mapa.title("Mapa Estructural - " + nombre_terminal)
-        ventana_mapa.geometry("1000x700")
-        ventana_mapa.configure(bg="#f4f4f0")
+        canvas_ocupacion_puertas.delete("all")
+
         ocupacion = GateOccupancy(bcn)
 
-        # 2. Contenedor y barras de scroll (¡Todas van dentro del else!)
-        frame_canvas = tk.Frame(ventana_mapa)
-        frame_canvas.pack(fill=tk.BOTH, expand=True)
-
-        vbar = tk.Scrollbar(frame_canvas, orient=tk.VERTICAL)
-        hbar = tk.Scrollbar(frame_canvas, orient=tk.HORIZONTAL)
-
-        canvas = tk.Canvas(frame_canvas, bg="#f4f4f0", highlightthickness=0,
-                           yscrollcommand=vbar.set, xscrollcommand=hbar.set)
-
-        vbar.config(command=canvas.yview)
-        hbar.config(command=canvas.xview)
-
-        vbar.pack(side=tk.RIGHT, fill=tk.Y)
-        hbar.pack(side=tk.BOTTOM, fill=tk.X)
-        canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
-
-        # 3. Filtrado de datos por terminal
+        # Filtramos solo las puertas de la terminal elegida.
         puertas_terminal = []
         i = 0
         while i < len(ocupacion):
@@ -214,6 +193,7 @@ def mostrar_mapa_grafico(nombre_terminal):
                 puertas_terminal.append(ocupacion[i])
             i = i + 1
 
+        # Sacamos las áreas sin repetirlas.
         areas = []
         i = 0
         while i < len(puertas_terminal):
@@ -223,17 +203,31 @@ def mostrar_mapa_grafico(nombre_terminal):
             i = i + 1
 
         COLOR_PASILLO = "#185c7a"
-        COLOR_LIBRE = "#00a650"    # Verde puro
-        COLOR_OCUPADO = "#ff0000"  # Rojo puro
+        COLOR_LIBRE = "#00a650"
+        COLOR_OCUPADO = "#ff0000"
 
-        canvas.create_text(50, 50, text=nombre_terminal, font=("Arial", 26, "bold"), anchor="e")
+        canvas_ocupacion_puertas.create_text(
+            50,
+            50,
+            text=nombre_terminal,
+            font=("Arial", 26, "bold"),
+            anchor="e"
+        )
 
-        # Pasillo horizontal principal
+        # Pasillo horizontal principal.
         ancho_total = len(areas) * 240 + 120
-        canvas.create_rectangle(80, 35, ancho_total, 65, fill=COLOR_PASILLO, outline="black")
+        canvas_ocupacion_puertas.create_rectangle(
+            80,
+            35,
+            ancho_total,
+            65,
+            fill=COLOR_PASILLO,
+            outline="black"
+        )
 
-        # 4. Dibujo de pasillos y puertas compactas
+        # Dibujamos las áreas y sus puertas.
         a = 0
+        max_largo = 160
         while a < len(areas):
             area_actual = areas[a]
             x_centro = 160 + (a * 240)
@@ -248,11 +242,26 @@ def mostrar_mapa_grafico(nombre_terminal):
             num_puertas = len(puertas_area)
             largo_pasillo = 80 + ((num_puertas // 2) + 1) * 45
 
-            # Pasillo vertical
-            canvas.create_rectangle(x_centro - 12, 65, x_centro + 12, largo_pasillo, fill=COLOR_PASILLO, outline="black")
+            if largo_pasillo > max_largo:
+                max_largo = largo_pasillo
+
+            # Pasillo vertical.
+            canvas_ocupacion_puertas.create_rectangle(
+                x_centro - 12,
+                65,
+                x_centro + 12,
+                largo_pasillo,
+                fill=COLOR_PASILLO,
+                outline="black"
+            )
 
             nombre_base = nombre_terminal + "BA" + area_actual.lower()
-            canvas.create_text(x_centro, largo_pasillo + 20, text=nombre_base, font=("Arial", 12, "bold"))
+            canvas_ocupacion_puertas.create_text(
+                x_centro,
+                largo_pasillo + 20,
+                text=nombre_base,
+                font=("Arial", 12, "bold")
+            )
 
             g = 0
             while g < len(puertas_area):
@@ -262,7 +271,7 @@ def mostrar_mapa_grafico(nombre_terminal):
 
                 y_pos = 100 + (g // 2) * 45
 
-                if g % 2 == 0:  # Derecha
+                if g % 2 == 0:
                     x_fin_linea = x_centro + 40
                     x_caja_1 = x_fin_linea
                     x_caja_2 = x_fin_linea + 22
@@ -270,7 +279,7 @@ def mostrar_mapa_grafico(nombre_terminal):
                     anclaje_avion = "w"
                     x_texto_puerta = x_fin_linea + 4
                     anclaje_puerta = "w"
-                else:  # Izquierda
+                else:
                     x_fin_linea = x_centro - 40
                     x_caja_1 = x_fin_linea - 22
                     x_caja_2 = x_fin_linea
@@ -279,27 +288,53 @@ def mostrar_mapa_grafico(nombre_terminal):
                     x_texto_puerta = x_fin_linea - 4
                     anclaje_puerta = "e"
 
-                # Líneas de los jetways
-                canvas.create_line(x_centro, y_pos, x_fin_linea, y_pos, width=3, fill=COLOR_PASILLO)
+                canvas_ocupacion_puertas.create_line(
+                    x_centro,
+                    y_pos,
+                    x_fin_linea,
+                    y_pos,
+                    width=3,
+                    fill=COLOR_PASILLO
+                )
 
-                # Cajas Rojo/Verde según ocupación
                 if ocupado == True:
                     color_caja = COLOR_OCUPADO
                 else:
                     color_caja = COLOR_LIBRE
-                canvas.create_rectangle(x_caja_1, y_pos - 6, x_caja_2, y_pos + 6, fill=color_caja, outline="black")
 
-                # Letra tamaño 7 para las puertas
-                canvas.create_text(x_texto_puerta, y_pos - 12, text=nombre_puerta, font=("Arial", 7), anchor=anclaje_puerta)
+                canvas_ocupacion_puertas.create_rectangle(
+                    x_caja_1,
+                    y_pos - 6,
+                    x_caja_2,
+                    y_pos + 6,
+                    fill=color_caja,
+                    outline="black"
+                )
+
+                canvas_ocupacion_puertas.create_text(
+                    x_texto_puerta,
+                    y_pos - 12,
+                    text=nombre_puerta,
+                    font=("Arial", 7),
+                    anchor=anclaje_puerta
+                )
 
                 if ocupado == True:
-                    canvas.create_text(x_texto_avion, y_pos, text=avion, font=("Arial", 9, "bold"), anchor=anclaje_avion)
+                    canvas_ocupacion_puertas.create_text(
+                        x_texto_avion,
+                        y_pos,
+                        text=avion,
+                        font=("Arial", 9, "bold"),
+                        anchor=anclaje_avion
+                    )
 
                 g = g + 1
+
             a = a + 1
 
-        canvas.update_idletasks()
-        canvas.config(scrollregion=canvas.bbox(tk.ALL))
+        # Permitimos mover la gráfica con las barras de scroll.
+        canvas_ocupacion_puertas.update_idletasks()
+        canvas_ocupacion_puertas.config(scrollregion=(0, 0, ancho_total + 80, max_largo + 80))
 
 def accion_cargar():
     global lista_airports, lista_vuelos
@@ -411,247 +446,27 @@ def accion_asignar_todos():
                 i = i + 1
 
             cambiar_estado("Asignados: " + str(asignados) + " | Sin puerta: " + str(errores))
-            dibujar_grafica_ocupacion_actual()
             messagebox.showinfo("INFO", "Asignación finalizada.")
 
 
 def accion_ver_T1():
     actualizar_ocupacion("T1")
-    dibujar_grafica_ocupacion_actual()
 
 
 def accion_ver_T2():
     actualizar_ocupacion("T2")
-    dibujar_grafica_ocupacion_actual()
 
 
-# Funciones puente para los nuevos botones morados.
+# Estos botones muestran la gráfica antigua de puertas, pero integrada en la pantalla central.
 def accion_grafica_puertas_T1():
     actualizar_ocupacion("T1")
-    dibujar_grafica_ocupacion_actual()
+    mostrar_mapa_grafico("T1")
 
 
 def accion_grafica_puertas_T2():
     actualizar_ocupacion("T2")
-    dibujar_grafica_ocupacion_actual()
+    mostrar_mapa_grafico("T2")
 
-
-
-def leer_resumen_terminal(linea):
-    # Recibe una línea como: T1 | TOTAL: 91 | OCUPADAS: 10 | LIBRES: 81
-    partes = linea.split("|")
-
-    if len(partes) < 4:
-        return ["", 0, 0, 0]
-
-    terminal = partes[0].strip()
-    total = int(partes[1].replace("TOTAL:", "").strip())
-    ocupadas = int(partes[2].replace("OCUPADAS:", "").strip())
-    libres = int(partes[3].replace("LIBRES:", "").strip())
-
-    return [terminal, total, ocupadas, libres]
-
-
-def obtener_datos_ocupacion_horas():
-    # Devuelve tres listas: horas, ocupación T1 y ocupación T2.
-    horas = []
-    datos_t1 = []
-    datos_t2 = []
-
-    h = 0
-    while h < len(lista_ocupacion_horas):
-        horas.append(h)
-        ocupadas_t1 = 0
-        ocupadas_t2 = 0
-
-        lineas = lista_ocupacion_horas[h]
-        i = 0
-        while i < len(lineas):
-            linea = lineas[i]
-
-            if linea.find("TOTAL:") != -1 and linea.find("OCUPADAS:") != -1:
-                resumen = leer_resumen_terminal(linea)
-
-                if resumen[0] == "T1":
-                    ocupadas_t1 = resumen[2]
-                elif resumen[0] == "T2":
-                    ocupadas_t2 = resumen[2]
-
-            i = i + 1
-
-        datos_t1.append(ocupadas_t1)
-        datos_t2.append(ocupadas_t2)
-        h = h + 1
-
-    return [horas, datos_t1, datos_t2]
-
-
-def dibujar_linea_ocupacion(datos, margen_izq, margen_arriba, alto_grafica, paso_x, maximo, color):
-    # Dibuja una línea en el canvas de ocupación usando una lista de datos.
-    puntos = []
-
-    i = 0
-    while i < len(datos):
-        x = margen_izq + i * paso_x
-        y = margen_arriba + alto_grafica - (datos[i] / maximo) * alto_grafica
-        puntos.append([x, y])
-        i = i + 1
-
-    i = 0
-    while i < len(puntos) - 1:
-        canvas_ocupacion_puertas.create_line(
-            puntos[i][0], puntos[i][1],
-            puntos[i + 1][0], puntos[i + 1][1],
-            fill=color,
-            width=3
-        )
-        i = i + 1
-
-    i = 0
-    while i < len(puntos):
-        canvas_ocupacion_puertas.create_oval(
-            puntos[i][0] - 3,
-            puntos[i][1] - 3,
-            puntos[i][0] + 3,
-            puntos[i][1] + 3,
-            fill=color,
-            outline=color
-        )
-        i = i + 1
-
-
-def dibujar_grafica_ocupacion_diaria(hora_actual):
-    # Dibuja en la pantalla de ocupación la evolución de T1 y T2 durante el día.
-    canvas_ocupacion_puertas.delete("all")
-
-    ancho = 710
-    alto = 210
-    margen_izq = 45
-    margen_abajo = 35
-    margen_arriba = 35
-    alto_grafica = alto - margen_arriba - margen_abajo
-
-    canvas_ocupacion_puertas.create_text(
-        ancho // 2,
-        16,
-        text="Ocupación diaria de puertas: T1 y T2",
-        font=("Arial", 11, "bold"),
-        fill=COLOR_TITULO
-    )
-
-    if len(lista_ocupacion_horas) == 0:
-        canvas_ocupacion_puertas.create_text(
-            ancho // 2,
-            alto // 2,
-            text="Primero asigna puertas por horas para ver este gráfico.",
-            font=("Arial", 10, "bold"),
-            fill=COLOR_TITULO
-        )
-        return
-
-    datos = obtener_datos_ocupacion_horas()
-    datos_t1 = datos[1]
-    datos_t2 = datos[2]
-
-    maximo = 1
-    i = 0
-    while i < len(datos_t1):
-        if datos_t1[i] > maximo:
-            maximo = datos_t1[i]
-        if datos_t2[i] > maximo:
-            maximo = datos_t2[i]
-        i = i + 1
-
-    # Ejes.
-    canvas_ocupacion_puertas.create_line(margen_izq, margen_arriba, margen_izq, alto - margen_abajo)
-    canvas_ocupacion_puertas.create_line(margen_izq, alto - margen_abajo, ancho - 20, alto - margen_abajo)
-
-    paso_x = (ancho - margen_izq - 35) / 23
-
-    # Línea vertical que marca la hora seleccionada con la barra.
-    x_hora = margen_izq + hora_actual * paso_x
-    canvas_ocupacion_puertas.create_line(x_hora, margen_arriba, x_hora, alto - margen_abajo, fill="#F5B7B1", width=2)
-    canvas_ocupacion_puertas.create_text(x_hora, alto - 12, text=str(hora_actual), font=("Arial", 8, "bold"))
-
-    # Dibujamos las dos terminales con los colores de las gráficas anteriores.
-    dibujar_linea_ocupacion(datos_t1, margen_izq, margen_arriba, alto_grafica, paso_x, maximo, "#9BB8CD")
-    dibujar_linea_ocupacion(datos_t2, margen_izq, margen_arriba, alto_grafica, paso_x, maximo, "#FFD6BA")
-
-    # Números de referencia.
-    canvas_ocupacion_puertas.create_text(18, margen_arriba, text=str(maximo), font=("Arial", 8))
-    canvas_ocupacion_puertas.create_text(20, alto - margen_abajo, text="0", font=("Arial", 8))
-
-    # Leyenda.
-    canvas_ocupacion_puertas.create_rectangle(555, 42, 570, 54, fill="#9BB8CD", outline=COLOR_TITULO)
-    canvas_ocupacion_puertas.create_text(585, 48, text="T1", anchor="w", font=("Arial", 9, "bold"))
-    canvas_ocupacion_puertas.create_rectangle(625, 42, 640, 54, fill="#FFD6BA", outline=COLOR_TITULO)
-    canvas_ocupacion_puertas.create_text(655, 48, text="T2", anchor="w", font=("Arial", 9, "bold"))
-
-
-def dibujar_grafica_ocupacion_actual():
-    # Esta función muestra una gráfica sencilla con la ocupación actual de T1 y T2.
-    canvas_ocupacion_puertas.delete("all")
-
-    ancho = 710
-    alto = 210
-    margen_izq = 70
-    margen_abajo = 35
-    margen_arriba = 35
-
-    canvas_ocupacion_puertas.create_text(
-        ancho // 2,
-        16,
-        text="Ocupación actual de puertas: T1 y T2",
-        font=("Arial", 11, "bold"),
-        fill=COLOR_TITULO
-    )
-
-    if bcn == "" or bcn == -1:
-        canvas_ocupacion_puertas.create_text(
-            ancho // 2,
-            alto // 2,
-            text="Primero carga la estructura LEBL.",
-            font=("Arial", 10, "bold"),
-            fill=COLOR_TITULO
-        )
-        return
-
-    ocupacion = GateOccupancy(bcn)
-
-    nombres = ["T1", "T2"]
-    valores = [0, 0]
-
-    i = 0
-    while i < len(ocupacion):
-        if ocupacion[i][0] == "T1" and ocupacion[i][3] == True:
-            valores[0] = valores[0] + 1
-        elif ocupacion[i][0] == "T2" and ocupacion[i][3] == True:
-            valores[1] = valores[1] + 1
-        i = i + 1
-
-    maximo = valores[0]
-    if valores[1] > maximo:
-        maximo = valores[1]
-    if maximo == 0:
-        maximo = 1
-
-    canvas_ocupacion_puertas.create_line(margen_izq, alto - margen_abajo, ancho - 40, alto - margen_abajo)
-    canvas_ocupacion_puertas.create_line(margen_izq, margen_arriba, margen_izq, alto - margen_abajo)
-
-    colores = ["#9BB8CD", "#FFD6BA"]
-    i = 0
-    while i < len(valores):
-        x1 = margen_izq + 130 + i * 180
-        x2 = x1 + 90
-        altura_barra = (valores[i] / maximo) * (alto - margen_arriba - margen_abajo - 10)
-        y1 = alto - margen_abajo - altura_barra
-        y2 = alto - margen_abajo
-
-        canvas_ocupacion_puertas.create_rectangle(x1, y1, x2, y2, fill=colores[i], outline=COLOR_TITULO)
-        canvas_ocupacion_puertas.create_text((x1 + x2) / 2, y1 - 10, text=str(valores[i]), font=("Arial", 9, "bold"))
-        canvas_ocupacion_puertas.create_text((x1 + x2) / 2, alto - 15, text=nombres[i], font=("Arial", 10, "bold"))
-
-        i = i + 1
 
 
 def limpiar_grafica():
@@ -662,7 +477,7 @@ def dibujar_grafica_barras(titulo, etiquetas, valores, colores):
     limpiar_grafica()
 
     ancho = 710
-    alto = 230
+    alto = 210
     margen_izq = 45
     margen_abajo = 35
     margen_arriba = 35
@@ -920,7 +735,7 @@ frame_izquierda = tk.Frame(
     bd=2,
     relief="groove",
     width=350,
-    height=840
+    height=890
 )
 frame_izquierda.grid(row=0, column=0, padx=8, pady=5, sticky="n")
 frame_izquierda.grid_propagate(False)
@@ -1053,7 +868,7 @@ frame_centro = tk.Frame(
     bd=2,
     relief="groove",
     width=760,
-    height=840
+    height=890
 )
 frame_centro.grid(row=0, column=1, padx=8, pady=5, sticky="n")
 frame_centro.grid_propagate(False)
@@ -1080,14 +895,36 @@ caja_ocupacion = tk.Text(
 )
 caja_ocupacion.pack(pady=3)
 
+frame_canvas_ocupacion = tk.Frame(frame_centro, bg=COLOR_PANEL)
+frame_canvas_ocupacion.pack(pady=3)
+
+scroll_y_ocupacion = tk.Scrollbar(frame_canvas_ocupacion, orient=tk.VERTICAL)
+scroll_x_ocupacion = tk.Scrollbar(frame_canvas_ocupacion, orient=tk.HORIZONTAL)
+
 canvas_ocupacion_puertas = tk.Canvas(
-    frame_centro,
+    frame_canvas_ocupacion,
     width=710,
-    height=210,
+    height=260,
     bg=COLOR_FONDO,
-    highlightthickness=1
+    highlightthickness=1,
+    yscrollcommand=scroll_y_ocupacion.set,
+    xscrollcommand=scroll_x_ocupacion.set
 )
-canvas_ocupacion_puertas.pack(pady=3)
+
+scroll_y_ocupacion.config(command=canvas_ocupacion_puertas.yview)
+scroll_x_ocupacion.config(command=canvas_ocupacion_puertas.xview)
+
+canvas_ocupacion_puertas.grid(row=0, column=0)
+scroll_y_ocupacion.grid(row=0, column=1, sticky="ns")
+scroll_x_ocupacion.grid(row=1, column=0, sticky="ew")
+
+canvas_ocupacion_puertas.create_text(
+    355,
+    130,
+    text="Aquí aparecerá la gráfica de ocupación de puertas T1 o T2.",
+    font=("Arial", 10, "bold"),
+    fill=COLOR_TITULO
+)
 
 
 titulo_seccion(frame_centro, "Pantalla de gráficas")
@@ -1095,7 +932,7 @@ titulo_seccion(frame_centro, "Pantalla de gráficas")
 canvas_grafica = tk.Canvas(
     frame_centro,
     width=710,
-    height=230,
+    height=210,
     bg=COLOR_FONDO,
     highlightthickness=1
 )
@@ -1109,7 +946,7 @@ frame_derecha = tk.Frame(
     bd=2,
     relief="groove",
     width=350,
-    height=840
+    height=890
 )
 frame_derecha.grid(row=0, column=2, padx=8, pady=5, sticky="n")
 frame_derecha.grid_propagate(False)
