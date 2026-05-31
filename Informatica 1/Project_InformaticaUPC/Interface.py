@@ -8,7 +8,7 @@ from LEBL import *
 
 root = tk.Tk()
 root.title("Gestor de Aeropuertos - INFO1 - Versión 4")
-root.geometry("1820x980")
+root.geometry("1760x890")
 root.configure(bg="#FAF3E0")
 
 
@@ -778,10 +778,10 @@ COLOR_MAPA_GRAFICO = "#CDB4DB"
 
 # Tamaños de las pantallas centrales.
 # La columna de texto es más pequeña y la de gráficos es más grande.
-ANCHO_CANVAS_OCUPACION = 760
-ALTO_CANVAS_OCUPACION = 520
-ANCHO_CANVAS_GRAFICA = 540
-ALTO_CANVAS_GRAFICA = 190
+ANCHO_CANVAS_OCUPACION = 730
+ALTO_CANVAS_OCUPACION = 360
+ANCHO_CANVAS_GRAFICA = 730
+ALTO_CANVAS_GRAFICA = 215
 
 
 def titulo_seccion(frame, texto):
@@ -812,11 +812,11 @@ tk.Label(
     font=("Arial", 20, "bold"),
     bg=COLOR_FONDO,
     fg=COLOR_TITULO
-).pack(pady=(8, 4))
+).pack(pady=(4, 2))
 
 
 frame_principal = tk.Frame(root, bg=COLOR_FONDO)
-frame_principal.pack(padx=10, pady=4, fill=tk.BOTH, expand=True)
+frame_principal.pack(padx=10, pady=2, fill=tk.BOTH, expand=True)
 
 
 # ---------------- COLUMNA IZQUIERDA ----------------
@@ -826,7 +826,7 @@ frame_izquierda = tk.Frame(
     bd=2,
     relief="groove",
     width=320,
-    height=835
+    height=745
 )
 frame_izquierda.grid(row=0, column=0, padx=8, pady=5, sticky="n")
 frame_izquierda.grid_propagate(False)
@@ -958,8 +958,8 @@ frame_centro = tk.Frame(
     bg=COLOR_PANEL,
     bd=2,
     relief="groove",
-    width=1160,
-    height=855
+    width=1090,
+    height=745
 )
 frame_centro.grid(row=0, column=1, padx=8, pady=5, sticky="n")
 frame_centro.grid_propagate(False)
@@ -967,11 +967,11 @@ frame_centro.grid_propagate(False)
 # Dentro del centro hacemos dos columnas:
 # izquierda = pantallas de texto más pequeñas
 # derecha = pantallas de gráficos más grandes
-frame_textos = tk.Frame(frame_centro, bg=COLOR_PANEL, width=345, height=840)
+frame_textos = tk.Frame(frame_centro, bg=COLOR_PANEL, width=335, height=730)
 frame_textos.grid(row=0, column=0, padx=(8, 4), pady=5, sticky="n")
 frame_textos.grid_propagate(False)
 
-frame_graficas_centro = tk.Frame(frame_centro, bg=COLOR_PANEL, width=795, height=840)
+frame_graficas_centro = tk.Frame(frame_centro, bg=COLOR_PANEL, width=735, height=730)
 frame_graficas_centro.grid(row=0, column=1, padx=(4, 8), pady=5, sticky="n")
 frame_graficas_centro.grid_propagate(False)
 
@@ -987,7 +987,7 @@ scroll_vuelos = tk.Scrollbar(frame_texto_vuelos, orient=tk.VERTICAL)
 caja_vuelos = tk.Text(
     frame_texto_vuelos,
     width=39,
-    height=13,
+    height=16,
     font=("Arial", 10),
     yscrollcommand=scroll_vuelos.set
 )
@@ -1007,7 +1007,7 @@ scroll_ocupacion_texto = tk.Scrollbar(frame_texto_ocupacion, orient=tk.VERTICAL)
 caja_ocupacion = tk.Text(
     frame_texto_ocupacion,
     width=39,
-    height=18,
+    height=17,
     font=("Arial", 10),
     yscrollcommand=scroll_ocupacion_texto.set
 )
@@ -1054,22 +1054,14 @@ canvas_ocupacion_puertas.create_text(
 
 titulo_seccion(frame_graficas_centro, "Pantalla de gráficas")
 
-frame_recuadro_grafica = tk.Frame(
-    frame_graficas_centro,
-    bg="black",
-    padx=2,
-    pady=2
-)
-frame_recuadro_grafica.pack(pady=3)
-
 canvas_grafica = tk.Canvas(
-    frame_recuadro_grafica,
+    frame_graficas_centro,
     width=ANCHO_CANVAS_GRAFICA,
     height=ALTO_CANVAS_GRAFICA,
     bg=COLOR_FONDO,
-    highlightthickness=0
+    highlightthickness=1
 )
-canvas_grafica.pack()
+canvas_grafica.pack(pady=3)
 
 
 # ---------------- COLUMNA DERECHA ----------------
@@ -1079,7 +1071,7 @@ frame_derecha = tk.Frame(
     bd=2,
     relief="groove",
     width=320,
-    height=835
+    height=745
 )
 frame_derecha.grid(row=0, column=2, padx=8, pady=5, sticky="n")
 frame_derecha.grid_propagate(False)
@@ -1173,7 +1165,7 @@ boton(
 
 # ---------------- PARTE INFERIOR ----------------
 frame_inferior = tk.Frame(root, bg=COLOR_FONDO)
-frame_inferior.pack(fill=tk.X, padx=12, pady=(4, 8))
+frame_inferior.pack(fill=tk.X, padx=12, pady=(2, 4))
 
 etiqueta_estado = tk.Label(
     frame_inferior,
