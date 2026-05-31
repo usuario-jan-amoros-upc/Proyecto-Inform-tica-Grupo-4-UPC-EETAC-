@@ -234,6 +234,194 @@ def ResetGates(bcn):
     return 0
 
 
+def AssignNightGates(bcn, aircrafts):
+    # Si la lista está vacía, devolvemos un código de error -1
+    if len(aircrafts) == 0:
+        return -1
+
+    i = 0
+    while i < len(aircrafts):
+        avion = aircrafts[i]
+
+        # Verificamos la condición: solo vuelos de salida (llegada vacía)
+        if avion.arrival_time == "" and avion.departure_time != "":
+            # Usamos tu función AssignGate para asignarle puerta
+            AssignGate(bcn, avion)
+
+        # Si no cumple la condición, el bucle simplemente pasa al siguiente avión
+        i = i + 1
+
+    return 0
+
+
+def FreeGate(bcn, id):
+    # Usamos tu misma estructura de 3 bucles while anidados para recorrer todo el aeropuerto
+    encontrado = False
+
+    t = 0
+    while t < len(bcn.terminals) and encontrado == False:
+        term = bcn.terminals[t]
+
+        a = 0
+        while a < len(term.boarding_areas) and encontrado == False:
+            area = term.boarding_areas[a]
+
+            g = 0
+            while g < len(area.gates) and encontrado == False:
+                gate = area.gates[g]
+
+                # Si la puerta está ocupada y la matrícula coincide con el id que buscamos
+                if gate.occupied == True and gate.aircraft_id == id:
+                    gate.occupied = False  # Liberamos la puerta
+                    gate.aircraft_id = ""  # Borramos el id del avión
+                    encontrado = True  # Activamos la bandera para salir de los bucles
+
+                g = g + 1
+            a = a + 1
+        t = t + 1
+
+    # Si se encontró y se liberó devolvemos 0, si no se encontró devolvemos un error -1
+    if encontrado == True:
+        return 0
+    else:
+        return -1
+
+
+def AssignGatesAtTime(bcn, aircrafts, time):
+    # Si no hay aeropuerto o la lista de aviones está vacía, salimos con error
+    if bcn == "" or bcn == -1 or len(aircrafts) == 0:
+        return -1
+
+    # Descomponemos la hora que nos pasan (ej: "12:00" -> nos quedamos con "12")
+    partes_tiempo = time.split(":")
+    hora_objetivo = partes_tiempo[0]
+
+    i = 0
+    while i < len(aircrafts):
+        avion = aircrafts[i]
+
+        # Si el avión tiene hora de salida programada
+        if avion.departure_time != "":
+            partes_despegue = avion.departure_time.split(":")
+            hora_despegue = partes_despegue[0]
+
+            # Si despega en esta hora, liberamos su puerta con tu función FreeGate
+            if hora_despegue == hora_objetivo:
+                FreeGate(bcn, avion.aircraft_id)
+
+        i = i + 1
+
+    aviones_rechazados = 0
+    j = 0
+    while j < len(aircrafts):
+        avion = aircrafts[j]
+
+        # Si el avión tiene hora de llegada programada
+        if avion.arrival_time != "":
+            partes_llegada = avion.arrival_time.split(":")
+            hora_llegada = partes_llegada[0]
+
+            # Si aterriza en esta hora, intentamos buscarle sitio
+            if hora_llegada == hora_objetivo:
+                resultado = AssignGate(bcn, avion)
+
+                # Si tu función AssignGate devuelve -1 o -2, es que no hay sitio compatible
+                if resultado < 0:
+                    aviones_rechazados = aviones_rechazados + 1
+
+        j = j + 1
+
+    # Devolvemos el número de aviones que no han cabido en esta hora
+    return aviones_rechazados
+
+import matplotlib.pyplot as plt
+
+def PlotDayOccupancy(bcn, aircrafts):
+    if bcn == "" or bcn == -1 or len(aircrafts) == 0:
+        return -1
+
+    # 1. Preparamos el aeropuerto para empezar desde cero
+    ResetGates(bcn)
+    AssignNightGates(bcn, aircrafts)
+
+    # Creamos las listas para el eje X y para los aviones rechazados
+    lista_horas = []
+    lista_rechazados = []
+
+    # Creamos listas dinámicas para guardar la ocupación de cada terminal de tu bcn
+    nombres_terminales = []
+    datos_ocupacion_terminales = []  # Será una lista de listas
+
+    t = 0
+    while t < len(bcn.terminals):
+        nombres_terminales.append(bcn.terminals[t].name)
+        datos_ocupacion_terminales.append([])  # Guardará los 24 datos de esa terminal
+        t = t + 1
+
+    # 2. Simulamos el día hora a hora (de 0 a 23)
+    h = 0
+    while h < 24:
+        # Fabricamos el string de la hora de forma manual y limpia
+        if h < 10:
+            hora_actual_texto = "0" + str(h) + ":00"
+        else:
+            hora_actual_texto = str(h) + ":00"
+
+        lista_horas.append(hora_actual_texto)
+
+        # Ejecutamos los movimientos de esta hora y guardamos los rechazados
+        rechazados_en_esta_hora = AssignGatesAtTime(bcn, aircrafts, hora_actual_texto)
+        lista_rechazados.append(rechazados_en_esta_hora)
+
+        # Hacemos un recuento de cómo ha quedado el aeropuerto tras los movimientos
+        foto_ocupacion = GateOccupancy(bcn)
+
+        # Contamos cuántas puertas ocupadas hay en cada terminal
+        idx_t = 0
+        while idx_t < len(nombres_terminales):
+            term_actual = nombres_terminales[idx_t]
+            puertas_ocupadas = 0
+
+            o = 0
+            while o < len(foto_ocupacion):
+                # Si la puerta pertenece a esta terminal y está ocupada (True)
+                if foto_ocupacion[o][0] == term_actual and foto_ocupacion[o][3] == True:
+                    puertas_ocupadas = puertas_ocupadas + 1
+                o = o + 1
+
+            # Guardamos el total de ocupadas de esta hora en la lista de la terminal
+            datos_ocupacion_terminales[idx_t].append(puertas_ocupadas)
+            idx_t = idx_t + 1
+
+        h = h + 1
+
+    # 3. Construimos el gráfico interactivo
+    plt.figure(figsize=(12, 6))
+
+    # Dibujamos las líneas de ocupación para cada terminal usando un bucle while
+    idx_t = 0
+    while idx_t < len(nombres_terminales):
+        plt.plot(lista_horas, datos_ocupacion_terminales[idx_t], marker='o', linewidth=2, label="Ocupación " + nombres_terminales[idx_t])
+        idx_t = idx_t + 1
+
+    # Dibujamos las barras rojas para los aviones rechazados (sin puerta)
+    plt.bar(lista_horas, lista_rechazados, color='#F5B7B1', alpha=0.7, label='Vuelos rechazados (Aero. Lleno)')
+
+    # Ajustes estéticos para que combine con tu interfaz original
+    plt.title("Evolución Temporal de la Ocupación en Barcelona (LEBL)")
+    plt.xlabel("Hora del Día")
+    plt.ylabel("Número de Puertas / Aviones")
+    plt.xticks(rotation=45)
+    plt.gcf().set_facecolor("#FAF3E0")
+    plt.gca().set_facecolor("#FAF3E0")
+    plt.legend()
+    plt.grid(True, linestyle='--', alpha=0.5)
+    plt.tight_layout()
+    plt.show()
+
+    return 0
+
+
 if __name__ == "__main__":
     from Aircraft import LoadArrivals
 
