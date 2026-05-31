@@ -8,7 +8,7 @@ from LEBL import *
 
 root = tk.Tk()
 root.title("Gestor de Aeropuertos - INFO1 - Versión 4")
-root.geometry("1320x900")
+root.geometry("1340x900")
 root.configure(bg="#FAF3E0")
 
 
@@ -437,7 +437,7 @@ def limpiar_grafica():
     canvas_grafica.delete("all")
 
 
-def dibujar_grafica_barras(titulo, etiquetas, valores):
+def dibujar_grafica_barras(titulo, etiquetas, valores, colores):
     limpiar_grafica()
 
     ancho = 480
@@ -484,7 +484,18 @@ def dibujar_grafica_barras(titulo, etiquetas, valores):
         y1 = alto - margen_abajo - altura_barra
         y2 = alto - margen_abajo
 
-        canvas_grafica.create_rectangle(x1, y1, x2, y2, fill=COLOR_GRAFICAS, outline=COLOR_TITULO)
+        # Elegimos el color de la barra.
+        if len(colores) == 0:
+            color_barra = COLOR_GRAFICAS
+        elif len(colores) == 1:
+            color_barra = colores[0]
+        else:
+            if i < len(colores):
+                color_barra = colores[i]
+            else:
+                color_barra = colores[len(colores) - 1]
+
+        canvas_grafica.create_rectangle(x1, y1, x2, y2, fill=color_barra, outline=COLOR_TITULO)
         canvas_grafica.create_text((x1 + x2) / 2, y1 - 8, text=str(valor), font=("Arial", 8))
 
         # Si hay pocas etiquetas, se escriben todas. Si hay muchas, se escriben algunas.
@@ -510,7 +521,8 @@ def accion_grafica_airports():
         dibujar_grafica_barras(
             "Aeropuertos Schengen / No Schengen",
             ["Schengen", "No Schengen"],
-            [schengen, no_schengen]
+            [schengen, no_schengen],
+            ["#9BB8CD", "#FFD6BA"]
         )
         cambiar_estado("Gráfica de aeropuertos mostrada en la interfaz.")
     else:
@@ -538,7 +550,7 @@ def accion_grafica_llegadas():
             etiquetas.append(i)
             i = i + 1
 
-        dibujar_grafica_barras("Llegadas por hora", etiquetas, horas)
+        dibujar_grafica_barras("Llegadas por hora", etiquetas, horas, ["#9BB8CD"])
         cambiar_estado("Gráfica de llegadas mostrada en la interfaz.")
     else:
         messagebox.showwarning("Error", "Primero debes cargar vuelos.")
@@ -570,7 +582,7 @@ def accion_grafica_airlines():
 
             i = i + 1
 
-        dibujar_grafica_barras("Vuelos por aerolínea", nombres, cantidades)
+        dibujar_grafica_barras("Vuelos por aerolínea", nombres, cantidades, ["#FFD6BA"])
         cambiar_estado("Gráfica de aerolíneas mostrada en la interfaz.")
     else:
         messagebox.showwarning("Error", "Primero debes cargar vuelos.")
@@ -604,7 +616,8 @@ def accion_grafica_tipo_vuelos():
         dibujar_grafica_barras(
             "Vuelos Schengen / No Schengen",
             ["Schengen", "No Schengen"],
-            [vuelos_schengen, vuelos_no_schengen]
+            [vuelos_schengen, vuelos_no_schengen],
+            ["#BEE3DB", "#F5B7B1"]
         )
         cambiar_estado("Gráfica de tipo de vuelos mostrada en la interfaz.")
     else:
@@ -626,10 +639,10 @@ def accion_mapa_vuelos():
 
 
 # ---------------- INTERFAZ RETOCADA ----------------
-# La idea es separar la ventana en zonas:
-# izquierda = cargar datos y añadir aviones
-# centro = pantallas de información
-# derecha = botones de gráficas, mapas y puertas
+# La ventana se separa en tres columnas:
+# izquierda = cargar datos, añadir aviones, gráficas y mapas
+# centro = pantallas de información y pantalla de gráficas
+# derecha = puertas, salidas y ocupación por horas
 # abajo = estado y botón salir
 
 COLOR_FONDO = "#FAF3E0"
@@ -685,7 +698,7 @@ frame_izquierda = tk.Frame(
     bg=COLOR_PANEL,
     bd=2,
     relief="groove",
-    width=330,
+    width=360,
     height=760
 )
 frame_izquierda.grid(row=0, column=0, padx=8, pady=5, sticky="n")
@@ -750,52 +763,58 @@ boton(
 )
 
 
-titulo_seccion(frame_izquierda, "--- VERSIÓN 4: SALIDAS Y HORAS ---")
+titulo_seccion(frame_izquierda, "--- GRÁFICAS ---")
 
 boton(
     frame_izquierda,
-    "Cargar Departures",
-    accion_cargar_departures,
-    COLOR_VERSION4,
+    "Gráfica Aeropuertos",
+    accion_grafica_airports,
+    COLOR_GRAFICAS,
     34
 )
 
 boton(
     frame_izquierda,
-    "Asignar puertas por horas",
-    accion_asignar_puertas_horas,
-    COLOR_PUERTAS,
+    "Gráfica Llegadas",
+    accion_grafica_llegadas,
+    COLOR_GRAFICAS,
     34
 )
 
-tk.Label(
+boton(
     frame_izquierda,
-    text="Mueve la línea para cambiar la hora",
-    font=("Arial", 10, "bold"),
-    bg=COLOR_PANEL,
-    fg=COLOR_TITULO
-).pack(pady=(10, 2))
-
-linea_horas = tk.Scale(
-    frame_izquierda,
-    from_=0,
-    to=23,
-    orient="horizontal",
-    length=260,
-    command=actualizar_ocupacion_hora,
-    bg=COLOR_PANEL,
-    highlightthickness=0
+    "Gráfica Aerolíneas",
+    accion_grafica_airlines,
+    COLOR_GRAFICAS,
+    34
 )
-linea_horas.pack(pady=2)
 
-etiqueta_hora_actual = tk.Label(
+boton(
     frame_izquierda,
-    text="Hora seleccionada: 0:00",
-    font=("Arial", 10, "bold"),
-    bg=COLOR_PANEL,
-    fg=COLOR_TITULO
+    "Gráfica Schengen Vuelos",
+    accion_grafica_tipo_vuelos,
+    COLOR_GRAFICAS,
+    34
 )
-etiqueta_hora_actual.pack(pady=4)
+
+
+titulo_seccion(frame_izquierda, "--- MAPAS GOOGLE EARTH ---")
+
+boton(
+    frame_izquierda,
+    "Mapa Aeropuertos Google Earth",
+    accion_mapa_airports,
+    COLOR_MAPAS,
+    34
+)
+
+boton(
+    frame_izquierda,
+    "Mapa Vuelos Google Earth",
+    accion_mapa_vuelos,
+    COLOR_MAPAS,
+    34
+)
 
 
 # ---------------- COLUMNA CENTRAL ----------------
@@ -804,7 +823,7 @@ frame_centro = tk.Frame(
     bg=COLOR_PANEL,
     bd=2,
     relief="groove",
-    width=520,
+    width=560,
     height=760
 )
 frame_centro.grid(row=0, column=1, padx=8, pady=5, sticky="n")
@@ -815,8 +834,8 @@ titulo_seccion(frame_centro, "Vuelos cargados / añadidos")
 
 caja_vuelos = tk.Text(
     frame_centro,
-    width=58,
-    height=9,
+    width=62,
+    height=10,
     font=("Arial", 10)
 )
 caja_vuelos.pack(pady=3)
@@ -826,34 +845,23 @@ titulo_seccion(frame_centro, "Ocupación de puertas")
 
 caja_ocupacion = tk.Text(
     frame_centro,
-    width=58,
-    height=9,
+    width=62,
+    height=11,
     font=("Arial", 10)
 )
 caja_ocupacion.pack(pady=3)
 
 
-titulo_seccion(frame_centro, "Ocupación según la hora")
-
-caja_ocupacion_hora = tk.Text(
-    frame_centro,
-    width=58,
-    height=6,
-    font=("Arial", 10)
-)
-caja_ocupacion_hora.pack(pady=3)
-
 titulo_seccion(frame_centro, "Pantalla de gráficas")
 
 canvas_grafica = tk.Canvas(
     frame_centro,
-    width=480,
-    height=210,
+    width=510,
+    height=260,
     bg=COLOR_FONDO,
     highlightthickness=1
 )
 canvas_grafica.pack(pady=3)
-
 
 
 # ---------------- COLUMNA DERECHA ----------------
@@ -869,39 +877,60 @@ frame_derecha.grid(row=0, column=2, padx=8, pady=5, sticky="n")
 frame_derecha.grid_propagate(False)
 
 
-titulo_seccion(frame_derecha, "--- GRÁFICAS ---")
+titulo_seccion(frame_derecha, "--- VERSIÓN 4: SALIDAS Y HORAS ---")
 
 boton(
     frame_derecha,
-    "Gráfica Aeropuertos",
-    accion_grafica_airports,
-    COLOR_GRAFICAS,
+    "Cargar Departures",
+    accion_cargar_departures,
+    COLOR_VERSION4,
     34
 )
 
 boton(
     frame_derecha,
-    "Gráfica Llegadas",
-    accion_grafica_llegadas,
-    COLOR_GRAFICAS,
+    "Asignar puertas por horas",
+    accion_asignar_puertas_horas,
+    COLOR_PUERTAS,
     34
 )
 
-boton(
+tk.Label(
     frame_derecha,
-    "Gráfica Aerolíneas",
-    accion_grafica_airlines,
-    COLOR_GRAFICAS,
-    34
-)
+    text="Mueve la línea para cambiar la hora",
+    font=("Arial", 10, "bold"),
+    bg=COLOR_PANEL,
+    fg=COLOR_TITULO
+).pack(pady=(10, 2))
 
-boton(
+linea_horas = tk.Scale(
     frame_derecha,
-    "Gráfica Schengen Vuelos",
-    accion_grafica_tipo_vuelos,
-    COLOR_GRAFICAS,
-    34
+    from_=0,
+    to=23,
+    orient="horizontal",
+    length=260,
+    command=actualizar_ocupacion_hora,
+    bg=COLOR_PANEL,
+    highlightthickness=0
 )
+linea_horas.pack(pady=2)
+
+etiqueta_hora_actual = tk.Label(
+    frame_derecha,
+    text="Hora seleccionada: 0:00",
+    font=("Arial", 10, "bold"),
+    bg=COLOR_PANEL,
+    fg=COLOR_TITULO
+)
+etiqueta_hora_actual.pack(pady=4)
+
+caja_ocupacion_hora = tk.Text(
+    frame_derecha,
+    width=39,
+    height=13,
+    font=("Arial", 10)
+)
+caja_ocupacion_hora.pack(pady=3)
 
 
 titulo_seccion(frame_derecha, "--- GESTIÓN DE PUERTAS ---")
@@ -946,25 +975,6 @@ boton(
     "Ver gráfica de puertas T2",
     accion_grafica_puertas_T2,
     COLOR_MAPA_GRAFICO,
-    34
-)
-
-
-titulo_seccion(frame_derecha, "--- MAPAS GOOGLE EARTH ---")
-
-boton(
-    frame_derecha,
-    "Mapa Aeropuertos Google Earth",
-    accion_mapa_airports,
-    COLOR_MAPAS,
-    34
-)
-
-boton(
-    frame_derecha,
-    "Mapa Vuelos Google Earth",
-    accion_mapa_vuelos,
-    COLOR_MAPAS,
     34
 )
 

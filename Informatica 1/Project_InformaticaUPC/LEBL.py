@@ -182,8 +182,13 @@ def AssignGate(bcn, aircraft):
     if terminal_name == "":
         return -1  # Error -1: La aerolínea no tiene terminal asignada en este aeropuerto
 
-    # 2. Comprobamos si el avión viene de un aeropuerto Schengen (control de pasaportes)
-    is_schengen = IsSchengenAirport(aircraft.origin)
+    # 2. Comprobamos si el avión viene de un aeropuerto Schengen.
+    # Si es un vuelo nocturno de salida, no tiene origen, así que usamos el destino.
+    codigo_tipo = aircraft.origin
+    if codigo_tipo == "" and aircraft.destination != "":
+        codigo_tipo = aircraft.destination
+
+    is_schengen = IsSchengenAirport(codigo_tipo)
     t = 0
 
     # 3. Empezamos a buscar una puerta libre que cumpla los requisitos
