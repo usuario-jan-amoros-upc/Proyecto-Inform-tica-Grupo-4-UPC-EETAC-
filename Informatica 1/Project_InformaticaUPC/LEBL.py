@@ -334,6 +334,98 @@ def AssignGatesAtTime(bcn, aircrafts, time):
     # Devolvemos el número de aviones que no han cabido en esta hora
     return aviones_rechazados
 
+
+def AssignGatesByHour(bcn, arrivals, departures):
+    # Esta función prepara la ocupación de puertas para cada hora del día.
+    # Devuelve una lista con 24 posiciones: una posición por cada hora.
+
+    if bcn == "" or bcn == -1:
+        return []
+
+    if len(arrivals) == 0 or len(departures) == 0:
+        return []
+
+    # Juntamos llegadas y salidas para que un mismo avión tenga llegada y salida.
+    from Aircraft import MergeMovements
+    aircrafts = MergeMovements(arrivals, departures)
+
+    if len(aircrafts) == 0:
+        return []
+
+    # Empezamos con todas las puertas libres y colocamos los aviones nocturnos.
+    ResetGates(bcn)
+    AssignNightGates(bcn, aircrafts)
+
+    ocupacion_horas = []
+
+    h = 0
+    while h < 24:
+        if h < 10:
+            hora_texto = "0" + str(h) + ":00"
+        else:
+            hora_texto = str(h) + ":00"
+
+        rechazados = AssignGatesAtTime(bcn, aircrafts, hora_texto)
+        foto = GateOccupancy(bcn)
+
+        lineas = []
+        lineas.append("Hora: " + hora_texto)
+        lineas.append("Vuelos rechazados: " + str(rechazados))
+        lineas.append("")
+
+        # Resumen por terminal.
+        t = 0
+        while t < len(bcn.terminals):
+            nombre_terminal = bcn.terminals[t].name
+
+            total = 0
+            ocupadas = 0
+            libres = 0
+
+            i = 0
+            while i < len(foto):
+                if foto[i][0] == nombre_terminal:
+                    total = total + 1
+
+                    if foto[i][3] == True:
+                        ocupadas = ocupadas + 1
+                    else:
+                        libres = libres + 1
+
+                i = i + 1
+
+            lineas.append(nombre_terminal + " | TOTAL: " + str(total) +
+                          " | OCUPADAS: " + str(ocupadas) +
+                          " | LIBRES: " + str(libres))
+            t = t + 1
+
+        lineas.append("")
+        lineas.append("PUERTAS OCUPADAS:")
+
+        hay_ocupadas = False
+        i = 0
+        while i < len(foto):
+            terminal = foto[i][0]
+            area = foto[i][1]
+            gate = foto[i][2]
+            ocupada = foto[i][3]
+            avion = foto[i][4]
+
+            if ocupada == True:
+                hay_ocupadas = True
+                lineas.append(terminal + " | " + area + " | " + gate + " | " + avion)
+
+            i = i + 1
+
+        if hay_ocupadas == False:
+            lineas.append("No hay puertas ocupadas.")
+
+        ocupacion_horas.append(lineas)
+        h = h + 1
+
+    return ocupacion_horas
+
+
 import matplotlib.pyplot as plt
 
 def PlotDayOccupancy(bcn, aircrafts):
