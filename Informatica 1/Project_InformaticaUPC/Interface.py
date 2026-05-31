@@ -8,7 +8,7 @@ from LEBL import *
 
 root = tk.Tk()
 root.title("Gestor de Aeropuertos - INFO1 - Versión 4")
-root.geometry("1520x1010")
+root.geometry("1760x960")
 root.configure(bg="#FAF3E0")
 
 
@@ -476,11 +476,12 @@ def limpiar_grafica():
 def dibujar_grafica_barras(titulo, etiquetas, valores, colores):
     limpiar_grafica()
 
-    ancho = 710
-    alto = 210
+    # Usamos el tamaño grande de la pantalla de gráficas.
+    ancho = ANCHO_CANVAS_GRAFICA
+    alto = ALTO_CANVAS_GRAFICA
     margen_izq = 45
-    margen_abajo = 35
-    margen_arriba = 35
+    margen_abajo = 40
+    margen_arriba = 40
 
     canvas_grafica.create_text(
         ancho // 2,
@@ -692,6 +693,13 @@ COLOR_PUERTAS = "#F4B183"
 COLOR_MAPAS = "#E5989B"
 COLOR_MAPA_GRAFICO = "#CDB4DB"
 
+# Tamaños de las pantallas centrales.
+# La columna de texto es más pequeña y la de gráficos es más grande.
+ANCHO_CANVAS_OCUPACION = 730
+ALTO_CANVAS_OCUPACION = 445
+ANCHO_CANVAS_GRAFICA = 730
+ALTO_CANVAS_GRAFICA = 290
+
 
 def titulo_seccion(frame, texto):
     tk.Label(
@@ -734,8 +742,8 @@ frame_izquierda = tk.Frame(
     bg=COLOR_PANEL,
     bd=2,
     relief="groove",
-    width=350,
-    height=890
+    width=320,
+    height=835
 )
 frame_izquierda.grid(row=0, column=0, padx=8, pady=5, sticky="n")
 frame_izquierda.grid_propagate(False)
@@ -867,35 +875,69 @@ frame_centro = tk.Frame(
     bg=COLOR_PANEL,
     bd=2,
     relief="groove",
-    width=760,
-    height=890
+    width=1090,
+    height=835
 )
 frame_centro.grid(row=0, column=1, padx=8, pady=5, sticky="n")
 frame_centro.grid_propagate(False)
 
+# Dentro del centro hacemos dos columnas:
+# izquierda = pantallas de texto más pequeñas
+# derecha = pantallas de gráficos más grandes
+frame_textos = tk.Frame(frame_centro, bg=COLOR_PANEL, width=335, height=820)
+frame_textos.grid(row=0, column=0, padx=(8, 4), pady=5, sticky="n")
+frame_textos.grid_propagate(False)
 
-titulo_seccion(frame_centro, "Vuelos cargados / añadidos")
+frame_graficas_centro = tk.Frame(frame_centro, bg=COLOR_PANEL, width=735, height=820)
+frame_graficas_centro.grid(row=0, column=1, padx=(4, 8), pady=5, sticky="n")
+frame_graficas_centro.grid_propagate(False)
+
+
+# ---------- PANTALLAS DE TEXTO ----------
+titulo_seccion(frame_textos, "Vuelos cargados / añadidos")
+
+frame_texto_vuelos = tk.Frame(frame_textos, bg=COLOR_PANEL)
+frame_texto_vuelos.pack(pady=3)
+
+scroll_vuelos = tk.Scrollbar(frame_texto_vuelos, orient=tk.VERTICAL)
 
 caja_vuelos = tk.Text(
-    frame_centro,
-    width=86,
-    height=11,
-    font=("Arial", 10)
+    frame_texto_vuelos,
+    width=39,
+    height=16,
+    font=("Arial", 10),
+    yscrollcommand=scroll_vuelos.set
 )
-caja_vuelos.pack(pady=3)
+
+scroll_vuelos.config(command=caja_vuelos.yview)
+caja_vuelos.grid(row=0, column=0)
+scroll_vuelos.grid(row=0, column=1, sticky="ns")
 
 
-titulo_seccion(frame_centro, "Ocupación de puertas")
+titulo_seccion(frame_textos, "Ocupación de puertas")
+
+frame_texto_ocupacion = tk.Frame(frame_textos, bg=COLOR_PANEL)
+frame_texto_ocupacion.pack(pady=3)
+
+scroll_ocupacion_texto = tk.Scrollbar(frame_texto_ocupacion, orient=tk.VERTICAL)
 
 caja_ocupacion = tk.Text(
-    frame_centro,
-    width=86,
-    height=11,
-    font=("Arial", 10)
+    frame_texto_ocupacion,
+    width=39,
+    height=23,
+    font=("Arial", 10),
+    yscrollcommand=scroll_ocupacion_texto.set
 )
-caja_ocupacion.pack(pady=3)
 
-frame_canvas_ocupacion = tk.Frame(frame_centro, bg=COLOR_PANEL)
+scroll_ocupacion_texto.config(command=caja_ocupacion.yview)
+caja_ocupacion.grid(row=0, column=0)
+scroll_ocupacion_texto.grid(row=0, column=1, sticky="ns")
+
+
+# ---------- PANTALLAS DE GRÁFICOS ----------
+titulo_seccion(frame_graficas_centro, "Gráfica de ocupación de puertas")
+
+frame_canvas_ocupacion = tk.Frame(frame_graficas_centro, bg=COLOR_PANEL)
 frame_canvas_ocupacion.pack(pady=3)
 
 scroll_y_ocupacion = tk.Scrollbar(frame_canvas_ocupacion, orient=tk.VERTICAL)
@@ -903,8 +945,8 @@ scroll_x_ocupacion = tk.Scrollbar(frame_canvas_ocupacion, orient=tk.HORIZONTAL)
 
 canvas_ocupacion_puertas = tk.Canvas(
     frame_canvas_ocupacion,
-    width=710,
-    height=260,
+    width=ANCHO_CANVAS_OCUPACION,
+    height=ALTO_CANVAS_OCUPACION,
     bg=COLOR_FONDO,
     highlightthickness=1,
     yscrollcommand=scroll_y_ocupacion.set,
@@ -919,20 +961,20 @@ scroll_y_ocupacion.grid(row=0, column=1, sticky="ns")
 scroll_x_ocupacion.grid(row=1, column=0, sticky="ew")
 
 canvas_ocupacion_puertas.create_text(
-    355,
-    130,
+    ANCHO_CANVAS_OCUPACION // 2,
+    ALTO_CANVAS_OCUPACION // 2,
     text="Aquí aparecerá la gráfica de ocupación de puertas T1 o T2.",
     font=("Arial", 10, "bold"),
     fill=COLOR_TITULO
 )
 
 
-titulo_seccion(frame_centro, "Pantalla de gráficas")
+titulo_seccion(frame_graficas_centro, "Pantalla de gráficas")
 
 canvas_grafica = tk.Canvas(
-    frame_centro,
-    width=710,
-    height=210,
+    frame_graficas_centro,
+    width=ANCHO_CANVAS_GRAFICA,
+    height=ALTO_CANVAS_GRAFICA,
     bg=COLOR_FONDO,
     highlightthickness=1
 )
@@ -945,8 +987,8 @@ frame_derecha = tk.Frame(
     bg=COLOR_PANEL,
     bd=2,
     relief="groove",
-    width=350,
-    height=890
+    width=320,
+    height=835
 )
 frame_derecha.grid(row=0, column=2, padx=8, pady=5, sticky="n")
 frame_derecha.grid_propagate(False)
