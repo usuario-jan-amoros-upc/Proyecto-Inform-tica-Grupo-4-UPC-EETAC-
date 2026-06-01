@@ -65,102 +65,6 @@ def accion_cargar_departures():
 
         cambiar_estado("Departures cargado correctamente.")
 
-def accion_asignar_todos_optimizado():
-    global bcn, lista_vuelos, lista_ocupacion_horas, lista_fotos_horas
-    from LEBL import LoadAirportStructure, AssignGatesAtTime, GateOccupancy, AssignNightGates, ResetGates
-    from Aircraft import MergeMovements
-
-    if bcn == "" or bcn == -1:
-        messagebox.showwarning("Error", "Primero debes cargar la estructura LEBL.")
-    else:
-        if len(lista_vuelos) == 0:
-            messagebox.showwarning("Error", "Primero debes cargar o añadir vuelos.")
-        elif len(lista_departures) == 0:
-            messagebox.showwarning("Error", "Primero debes cargar las salidas (Departures).")
-        else:
-            bcn = LoadAirportStructure("LEBL.txt")
-
-            # Unimos llegadas y salidas
-            aircrafts = MergeMovements(lista_vuelos, lista_departures)
-
-            if len(aircrafts) == 0:
-                messagebox.showwarning("Error", "No se han podido combinar los movimientos de aviones.")
-                return
-
-            # Inicializamos las estructuras temporales para la barra de 24 horas
-            lista_ocupacion_horas = []
-            lista_fotos_horas = []
-
-            # Ponemos el aeropuerto a cero y colocamos los aviones nocturnos
-            ResetGates(bcn)
-            AssignNightGates(bcn, aircrafts)
-
-            h = 0
-            while h < 24:
-                if h < 10:
-                    hora_texto = "0" + str(h) + ":00"
-                else:
-                    hora_texto = str(h) + ":00"
-
-                rechazados = AssignGatesAtTime(bcn, aircrafts, hora_texto)
-
-                # Guardamos la foto para dibujar los bloques verdes/rojos en el mapa gráfico
-                foto = GateOccupancy(bcn)
-                copia_foto = []
-                i = 0
-                while i < len(foto):
-                    copia_foto.append([foto[i][0], foto[i][1], foto[i][2], foto[i][3], foto[i][4]])
-                    i = i + 1
-                lista_fotos_horas.append(copia_foto)
-
-                lineas_texto = []
-                lineas_texto.append("Hora: " + hora_texto)
-                lineas_texto.append("Vuelos rechazados: " + str(rechazados))
-                lineas_texto.append("")
-
-                t = 0
-                while t < len(bcn.terminals):
-                    nombre_terminal = bcn.terminals[t].name
-                    total = 0
-                    ocupadas = 0
-                    libres = 0
-
-                    i = 0
-                    while i < len(foto):
-                        if foto[i][0] == nombre_terminal:
-                            total = total + 1
-                            if foto[i][3] == True:
-                                ocupadas = ocupadas + 1
-                            else:
-                                libres = libres + 1
-                        i = i + 1
-
-                    lineas_texto.append(nombre_terminal + " | TOTAL: " + str(total) + " | OCUPADAS: " + str(
-                        ocupadas) + " | LIBRES: " + str(libres))
-                    t = t + 1
-
-                lineas_texto.append("")
-                lineas_texto.append("PUERTAS OCUPADAS:")
-
-                hay_ocupadas = False
-                i = 0
-                while i < len(foto):
-                    if foto[i][3] == True:
-                        hay_ocupadas = True
-                        lineas_texto.append(foto[i][0] + " | " + foto[i][1] + " | " + foto[i][2] + " | " + foto[i][4])
-                    i = i + 1
-
-                if not hay_ocupadas:
-                    lineas_texto.append("No hay puertas ocupadas.")
-
-                lista_ocupacion_horas.append(lineas_texto)
-                h = h + 1
-
-            #Forzamos el refresco completo de la pantalla
-            actualizar_ocupacion_hora(linea_horas.get())
-
-            cambiar_estado("Asignación Inteligente procesada por horas correctamente.")
-            messagebox.showinfo("INFO", "Asignación Inteligente completada para las 24 horas del día.")
 
 def crear_fotos_ocupacion_por_hora():
     # Esta función guarda una foto completa de las puertas en cada hora del día.
@@ -863,6 +767,103 @@ def accion_mapa_vuelos():
     else:
         messagebox.showwarning("Error", "Primero debes cargar aeropuertos y vuelos.")
 
+#EXTRAS
+def accion_asignar_todos_optimizado():
+    global bcn, lista_vuelos, lista_ocupacion_horas, lista_fotos_horas
+    from LEBL import LoadAirportStructure, AssignGatesAtTime, GateOccupancy, AssignNightGates, ResetGates, AssignGateOptimized
+    from Aircraft import MergeMovements
+
+    if bcn == "" or bcn == -1:
+        messagebox.showwarning("Error", "Primero debes cargar la estructura LEBL.")
+    else:
+        if len(lista_vuelos) == 0:
+            messagebox.showwarning("Error", "Primero debes cargar o añadir vuelos.")
+        elif len(lista_departures) == 0:
+            messagebox.showwarning("Error", "Primero debes cargar las salidas (Departures).")
+        else:
+            bcn = LoadAirportStructure("LEBL.txt")
+
+            # Unimos llegadas y salidas
+            aircrafts = MergeMovements(lista_vuelos, lista_departures)
+
+            if len(aircrafts) == 0:
+                messagebox.showwarning("Error", "No se han podido combinar los movimientos de aviones.")
+                return
+
+            # Inicializamos las estructuras temporales para la barra de 24 horas
+            lista_ocupacion_horas = []
+            lista_fotos_horas = []
+
+            # Ponemos el aeropuerto a cero y colocamos los aviones nocturnos
+            ResetGates(bcn)
+            AssignNightGates(bcn, aircrafts)
+
+            h = 0
+            while h < 24:
+                if h < 10:
+                    hora_texto = "0" + str(h) + ":00"
+                else:
+                    hora_texto = str(h) + ":00"
+
+                rechazados = AssignGatesAtTime(bcn, aircrafts, hora_texto)
+
+                # Guardamos la foto para dibujar los bloques verdes/rojos en el mapa gráfico
+                foto = GateOccupancy(bcn)
+                copia_foto = []
+                i = 0
+                while i < len(foto):
+                    copia_foto.append([foto[i][0], foto[i][1], foto[i][2], foto[i][3], foto[i][4]])
+                    i = i + 1
+                lista_fotos_horas.append(copia_foto)
+
+                lineas_texto = []
+                lineas_texto.append("Hora: " + hora_texto)
+                lineas_texto.append("Vuelos rechazados: " + str(rechazados))
+                lineas_texto.append("")
+
+                t = 0
+                while t < len(bcn.terminals):
+                    nombre_terminal = bcn.terminals[t].name
+                    total = 0
+                    ocupadas = 0
+                    libres = 0
+
+                    i = 0
+                    while i < len(foto):
+                        if foto[i][0] == nombre_terminal:
+                            total = total + 1
+                            if foto[i][3] == True:
+                                ocupadas = ocupadas + 1
+                            else:
+                                libres = libres + 1
+                        i = i + 1
+
+                    lineas_texto.append(nombre_terminal + " | TOTAL: " + str(total) + " | OCUPADAS: " + str(
+                        ocupadas) + " | LIBRES: " + str(libres))
+                    t = t + 1
+
+                lineas_texto.append("")
+                lineas_texto.append("PUERTAS OCUPADAS:")
+
+                hay_ocupadas = False
+                i = 0
+                while i < len(foto):
+                    if foto[i][3] == True:
+                        hay_ocupadas = True
+                        lineas_texto.append(foto[i][0] + " | " + foto[i][1] + " | " + foto[i][2] + " | " + foto[i][4])
+                    i = i + 1
+
+                if not hay_ocupadas:
+                    lineas_texto.append("No hay puertas ocupadas.")
+
+                lista_ocupacion_horas.append(lineas_texto)
+                h = h + 1
+
+            #Forzamos el refresco completo de la pantalla
+            actualizar_ocupacion_hora(linea_horas.get())
+
+            cambiar_estado("Asignación Inteligente procesada por horas correctamente.")
+            messagebox.showinfo("INFO", "Asignación Inteligente completada para las 24 horas del día.")
 
 def accion_mapa_puertas_lebl():
     global bcn, lista_fotos_horas
@@ -908,11 +909,8 @@ def accion_mapa_puertas_lebl():
         # 3. Solo ahora, después de hacer clic, enviamos la foto correcta a Google Earth
         MapGatesToGoogleEarth(bcn)
         cambiar_estado("Mapa actualizado a las " + str(hora_actual) + ":00 en Google Earth.")
-# La ventana se separa en tres columnas:
-# izquierda = cargar datos, añadir aviones, gráficas y mapas
-# centro = pantallas de información y pantalla de gráficas
-# derecha = puertas, salidas y ocupación por horas
-# abajo = estado y botón salir
+
+#INTERFAZ
 
 COLOR_FONDO = "#FAF3E0"
 COLOR_PANEL = "#FFF8E7"
