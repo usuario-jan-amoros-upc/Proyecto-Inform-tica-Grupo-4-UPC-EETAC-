@@ -2,10 +2,11 @@ from Airport import IsSchengenAirport
 
 
 class Gate:
-    def __init__(self, name):
+    def __init__(self, name,distancia_a_control=100):
         self.name = name  # Nombre de la puerta (ej: T1AG01)
         self.occupied = False  # Al empezar, la puerta siempre está libre (False)
         self.aircraft_id = ""  # Matrícula del avión que aparque aquí
+        self.distancia_a_control=distancia_a_control   #distancia en metros a la zona central
 
 
 class BoardingArea:
