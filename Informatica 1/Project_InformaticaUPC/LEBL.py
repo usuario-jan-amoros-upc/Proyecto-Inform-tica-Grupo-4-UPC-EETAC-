@@ -519,6 +519,207 @@ def PlotDayOccupancy(bcn, aircrafts):
     return 0
 
 
+import os
+
+
+def MapGatesToGoogleEarth(bcn, filename="lebl_gates_live.kml"):
+
+    # --- 1. CÁLCULO DE ESTADÍSTICAS EN TIEMPO REAL ---
+    t1_totales = 0
+    t1_ocupadas = 0
+    t2_totales = 0
+    t2_ocupadas = 0
+
+    # Recorremos los objetos para hacer las matemáticas del aeropuerto
+    for t in bcn.terminals:
+        es_t1 = "T1" in str(t.name).upper()
+        for area in t.boarding_areas:
+            for gate in area.gates:
+                if es_t1:
+                    t1_totales += 1
+                    if gate.occupied:
+                        t1_ocupadas += 1
+                else:
+                    t2_totales += 1
+                    if gate.occupied:
+                        t2_ocupadas += 1
+
+    # Calculamos los porcentajes finales de ocupación
+    porcentaje_t1 = (t1_ocupadas / t1_totales * 100) if t1_totales > 0 else 0
+    porcentaje_t2 = (t2_ocupadas / t2_totales * 100) if t2_totales > 0 else 0
+
+    # Coordenadas base en la silueta para el centro de cada área
+    COORDENADAS_AREAS = {
+        'A': (41.2894, 2.0728), 'B': (41.2877, 2.0662), 'C': (41.2870, 2.0706),
+        'D': (41.2919, 2.0763), 'E': (41.2844, 2.0725),
+        'M': (41.3037, 2.0736), 'R': (41.3020, 2.0765), 'S': (41.3000, 2.0795)
+    }
+
+    f = open(filename, "w", encoding="utf-8")
+    f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
+    f.write('<kml xmlns="http://www.opengis.net/kml/2.2">\n')
+    f.write('<Document>\n')
+
+    # --- 2. PANEL DE CONTROL NATIVO EN HTML ---
+    f.write('  <name>LEBL - Control de Áreas Profesional</name>\n')
+    f.write('  <open>1</open>\n')  # Hace que el árbol de carpetas izquierdo se expanda solo
+    f.write('  <description><![CDATA[\n')
+    f.write(
+        '    <div style="background-color: #1c1d22; color: #ffffff; padding: 15px; border-radius: 10px; font-family: Segoe UI, Arial, sans-serif; width: 280px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">\n')
+    f.write(
+        '      <h3 style="color: #00e676; margin-top: 0; margin-bottom: 12px; border-bottom: 2px solid #2e3035; padding-bottom: 6px; font-size: 16px; letter-spacing: 1px;">📊 RADAR LEBL LIVE</h3>\n')
+
+    # Barra de progreso para la Terminal 1
+    f.write(
+        f'      <p style="margin: 6px 0; font-size: 13px;"><b>Terminal 1:</b> <span style="color: #ffca28; float: right;">{porcentaje_t1:.1f}%</span></p>\n')
+    f.write(
+        '      <div style="background: #2e3035; height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 12px;">\n')
+    f.write(f'        <div style="background: #ffca28; height: 100%; width: {int(porcentaje_t1)}%;"></div>\n')
+    f.write('      </div>\n')
+
+    # Barra de progreso para la Terminal 2
+    f.write(
+        f'      <p style="margin: 6px 0; font-size: 13px;"><b>Terminal 2:</b> <span style="color: #00e676; float: right;">{porcentaje_t2:.1f}%</span></p>\n')
+    f.write(
+        '      <div style="background: #2e3035; height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 12px;">\n')
+    f.write(f'        <div style="background: #00e676; height: 100%; width: {int(porcentaje_t2)}%;"></div>\n')
+    f.write('      </div>\n')
+
+    f.write(
+        '      <p style="font-size: 11px; color: #aaaaaa; margin-top: 10px; line-height: 1.4; border-top: 1px solid #2e3035; padding-top: 8px;">• Datos calculados automáticamente en Python.<br/>• Haz clic en los iconos blancos para desplegar las puertas de esa zona.</p>\n')
+    f.write('    </div>\n')
+    f.write('  ]]></description>\n')
+
+    # --- 3. ESTILOS DE CHINCHETAS Y PUERTAS ---
+    # Estilo de chincheta blanca limpia para los centros de las áreas
+    f.write('  <Style id="centro_area">\n')
+    f.write('    <IconStyle>\n')
+    f.write('      <scale>1.4</scale>\n')
+    f.write('      <Icon><href>http://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon>\n')
+    f.write('    </IconStyle>\n')
+    f.write('    <LabelStyle><scale>1.1</scale></LabelStyle>\n')  # Hace que el texto del nombre flote en el mapa
+    f.write('  </Style>\n')
+
+    # Estilos circulares para las puertas (Verde = Libre, Rojo = Ocupado)
+    f.write(
+        '  <Style id="libre"><IconStyle><color>ff00ff00</color><scale>1.2</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon></IconStyle></Style>\n')
+    f.write(
+        '  <Style id="ocupado"><IconStyle><color>ff0000ff</color><scale>1.2</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon></IconStyle></Style>\n')
+
+    # --- 4. CONSTRUCCIÓN DEL MAPA (Efecto Abanico Puro) ---
+    i = 0
+    while i < len(bcn.terminals):
+        t = bcn.terminals[i]
+        es_t1 = "T1" in str(t.name).upper()
+
+        f.write('  <Folder>\n')
+        f.write(f'    <name>Terminal {t.name}</name>\n')
+
+        j = 0
+        while j < len(t.boarding_areas):
+            area = t.boarding_areas[j]
+            nombre_area = str(area.name).upper().strip()
+
+            if nombre_area in COORDENADAS_AREAS:
+                lat_area, lon_area = COORDENADAS_AREAS[nombre_area]
+            else:
+                lat_area, lon_area = (41.2882, 2.0705) if es_t1 else (41.3015, 2.0775)
+
+            f.write('    <Folder>\n')
+            f.write(f'      <name>Área {nombre_area}</name>\n')
+
+            # Marcador principal Blanco con el nombre grabado en la silueta
+            f.write('      <Placemark>\n')
+            f.write(f'        <name>ÁREA {nombre_area}</name>\n')
+            f.write(
+                f'        <description><![CDATA[<h3>Área de Embarque {nombre_area}</h3><p>Haz clic en este punto físico para desplegar todas sus puertas.</p>]]></description>\n')
+            f.write('        <styleUrl>#centro_area</styleUrl>\n')
+            f.write('        <Point>\n')
+            f.write(f'          <coordinates>{lon_area},{lat_area},0</coordinates>\n')
+            f.write('        </Point>\n')
+            f.write('      </Placemark>\n')
+
+            k = 0
+            while k < len(area.gates):
+                gate = area.gates[k]
+                nombre_real = str(gate.name).strip().upper()
+
+                # EFECTO ABANICO: Forzamos a que todas las puertas mueran exactamente en el mismo punto
+                lat_gate = lat_area
+                lon_gate = lon_area
+
+                # Comprobación de aviones y colores (Verde / Rojo)
+                if gate.occupied:
+                    estilo = "#ocupado"
+                    estado_txt = "<font color='red'><b>OCUPADA</b></font>"
+                    info_avion = f"<b>AVIÓN:</b> {gate.aircraft_id}<br/>"
+                else:
+                    estilo = "#libre"
+                    estado_txt = "<font color='green'><b>LIBRE</b></font>"
+                    info_avion = ""
+
+                desc_html = f"<b>PUERTA:</b> {nombre_real}<br/><b>ESTADO:</b> {estado_txt}<br/>{info_avion}<b>UBICACIÓN:</b> Terminal {t.name} - Zona {nombre_area}"
+
+                f.write('        <Placemark>\n')
+                f.write(f'          <name>{nombre_real}</name>\n')
+                f.write(f'          <description><![CDATA[{desc_html}]]></description>\n')
+                f.write(f'          <styleUrl>{estilo}</styleUrl>\n')
+                f.write('          <Point>\n')
+                f.write(f'            <coordinates>{lon_gate},{lat_gate},0</coordinates>\n')
+                f.write('          </Point>\n')
+                f.write('        </Placemark>\n')
+
+                k += 1
+
+            f.write('    </Folder>\n')
+            j += 1
+
+        f.write('  </Folder>\n')
+        i += 1
+
+    f.write('  </Document>\n</kml>\n')
+    f.close()
+
+    os.startfile(filename)
+    return True
+
+import time
+
+
+def ManejarRadarTiempo(segundos_espera=5):
+    from Aircraft import LoadArrivals  # Importación local para evitar conflictos
+
+    print(
+        f"\n[⏱️] Motor de tiempo iniciado. Escaneando cambios cada {segundos_espera}s..."
+    )
+    print(
+        "[💡] Para detener el programa, presiona Ctrl+C aquí en la consola.\n"
+    )
+
+    try:
+        while True:
+            # Pausa de los segundos configurados
+            time.sleep(segundos_espera)
+
+            # Volvemos a leer y procesar tus archivos en cada ciclo
+            bcn_live = LoadAirportStructure("LEBL.txt")
+            aircrafts_live = LoadArrivals("Arrivals.txt")
+
+            if bcn_live != -1:
+                j = 0
+                while j < len(aircrafts_live):
+                    AssignGate(bcn_live, aircrafts_live[j])
+                    j += 1
+
+                # Sobrescribimos el KML. Google Earth lo leerá solo en segundo plano.
+                MapGatesToGoogleEarth(bcn_live, filename="lebl_gates_live.kml")
+                print("• [Radar Sync] Archivos escaneados y mapa actualizado.")
+            else:
+                print("[!] Error leyendo 'LEBL.txt' en este ciclo.")
+
+    except KeyboardInterrupt:
+        print("\n[INFO] El motor de tiempo del radar se ha apagado de forma segura.")
+
 if __name__ == "__main__":
     from Aircraft import LoadArrivals
 
@@ -539,3 +740,5 @@ if __name__ == "__main__":
         # Imprimimos los resultados finales en la consola
         print("Puertas asignadas:", assigned)
         print("Total puertas:", len(GateOccupancy(bcn)))
+
+        ManejarRadarTiempo(segundos_espera=5)

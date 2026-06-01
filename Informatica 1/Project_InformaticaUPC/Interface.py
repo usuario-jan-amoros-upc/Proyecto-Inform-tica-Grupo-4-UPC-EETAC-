@@ -1,5 +1,15 @@
 import tkinter as tk
+import ctypes
+
+try:
+    ctypes.windll.shcore.SetProcessDpiAwareness(1)
+except:
+    try:
+        ctypes.windll.user32.SetProcessDPIAware()
+    except:
+        pass
 from tkinter import messagebox
+
 
 from Airport import *
 from Aircraft import *
@@ -854,7 +864,50 @@ def accion_mapa_vuelos():
         messagebox.showwarning("Error", "Primero debes cargar aeropuertos y vuelos.")
 
 
-# ---------------- INTERFAZ RETOCADA ----------------
+def accion_mapa_puertas_lebl():
+    global bcn, lista_fotos_horas
+    from LEBL import MapGatesToGoogleEarth
+
+    if bcn == "" or bcn == -1:
+        messagebox.showwarning("Error", "Primero debes cargar la estructura LEBL.")
+    else:
+        # 1. Miramos qué hora marca la barra en el momento en que haces clic
+        hora_actual = int(linea_horas.get())
+
+        # 2. Si ya has hecho la "Asignación por horas", preparamos los datos
+        if len(lista_fotos_horas) == 24:
+            foto_hora = lista_fotos_horas[hora_actual]
+
+            t = 0
+            while t < len(bcn.terminals):
+                term = bcn.terminals[t]
+
+                a = 0
+                while a < len(term.boarding_areas):
+                    area = term.boarding_areas[a]
+
+                    g = 0
+                    while g < len(area.gates):
+                        gate = area.gates[g]
+
+                        # Buscamos esta puerta en la foto de la hora elegida y la copiamos
+                        i = 0
+                        encontrado = False
+                        while i < len(foto_hora) and encontrado == False:
+                            if foto_hora[i][0] == term.name and foto_hora[i][1] == area.name and foto_hora[i][
+                                2] == gate.name:
+                                gate.occupied = foto_hora[i][3]
+                                gate.aircraft_id = foto_hora[i][4]
+                                encontrado = True
+                            i = i + 1
+
+                        g = g + 1
+                    a = a + 1
+                t = t + 1
+
+        # 3. Solo ahora, después de hacer clic, enviamos la foto correcta a Google Earth
+        MapGatesToGoogleEarth(bcn)
+        cambiar_estado("Mapa actualizado a las " + str(hora_actual) + ":00 en Google Earth.")
 # La ventana se separa en tres columnas:
 # izquierda = cargar datos, añadir aviones, gráficas y mapas
 # centro = pantallas de información y pantalla de gráficas
@@ -1047,6 +1100,13 @@ boton(
     34
 )
 
+boton(
+    frame_izquierda,
+    "Mapa Puertas LEBL Google Earth",
+    accion_mapa_puertas_lebl,
+    COLOR_MAPAS,
+    34
+)
 
 # ---------------- COLUMNA CENTRAL ----------------
 frame_centro = tk.Frame(
