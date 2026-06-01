@@ -328,7 +328,7 @@ def AssignGatesAtTime(bcn, aircrafts, time):
 
             # Si aterriza en esta hora, intentamos buscarle sitio
             if hora_llegada == hora_objetivo:
-                resultado = AssignGate(bcn, avion)
+                resultado = AssignGateOptimized(bcn, avion)
 
                 # Si tu función AssignGate devuelve -1 o -2, es que no hay sitio compatible
                 if resultado < 0:
@@ -517,6 +517,62 @@ def PlotDayOccupancy(bcn, aircrafts):
     plt.show()
 
     return 0
+
+#EXTRAS
+def AssignGateOptimized(bcn, aircraft):
+    # 1. Buscamos en qué terminal tiene que operar el avión según su aerolínea
+    terminal_name = SearchTerminal(bcn, aircraft.airline)
+    if terminal_name == "":
+        return -1  # Error -1: La aerolínea no tiene terminal asignada
+
+    # 2. Comprobamos si el avión viene de un aeropuerto Schengen
+    codigo_tipo = aircraft.origin
+    if codigo_tipo == "" and aircraft.destination != "":
+        codigo_tipo = aircraft.destination
+
+    is_schengen = IsSchengenAirport(codigo_tipo)
+
+    # --- AQUÍ EMPIEZA LA OPTIMIZACIÓN ---
+    # En lugar de quedarnos con la primera que veamos, vamos a buscar TODAS las compatibles
+    # y elegiremos la que tenga menor distancia.
+    puerta_optima = None
+    distancia_minima = 999999  # Empezamos con un número muy alto para poder ir rebajándolo
+
+    t = 0
+    while t < len(bcn.terminals):
+        term = bcn.terminals[t]
+
+        if term.name == terminal_name:
+            a = 0
+            while a < len(term.boarding_areas):
+                area = term.boarding_areas[a]
+
+                # Filtramos por tipo de vuelo (Schengen o No-Schengen)
+                if (is_schengen == True and area.type == "Schengen") or (
+                        is_schengen == False and area.type == "non-Schengen"):
+
+                    g = 0
+                    while g < len(area.gates):
+                        gate = area.gates[g]
+
+                        # Si la puerta está libre, comprobamos si es la más cercana que hemos visto hasta ahora
+                        if gate.occupied == False:
+                            if gate.distancia_a_control < distancia_minima:
+                                distancia_minima = gate.distancia_a_control
+                                puerta_optima = gate  # Guardamos la referencia temporalmente
+
+                        g = g + 1
+                a = a + 1
+        t = t + 1
+
+    # 3. Una vez revisadas todas las opciones, si encontramos una puerta óptima, la asignamos
+    if puerta_optima is not None:
+        puerta_optima.occupied = True
+        puerta_optima.aircraft_id = aircraft.aircraft_id
+        return 0  # Éxito
+
+    return -2  # Error -2: No quedan puertas libres compatibles
+
 
 
 import os
