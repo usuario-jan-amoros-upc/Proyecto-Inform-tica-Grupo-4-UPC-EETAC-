@@ -3,22 +3,22 @@ from Airport import IsSchengenAirport
 
 class Gate:
     def __init__(self, name,distancia_a_control=100):
-        self.name = name  # Nombre de la puerta (ej: T1AG01)
-        self.occupied = False  # Al empezar, la puerta siempre está libre (False)
+        self.name = name  # Nombre de la puerta 
+        self.occupied = False  # Al empezar, la puerta siempre está libre 
         self.aircraft_id = ""  # Matrícula del avión que aparque aquí
         self.distancia_a_control=distancia_a_control   #distancia en metros a la zona central
 
 
 class BoardingArea:
     def __init__(self, name, area_type):
-        self.name = name  # Nombre de la zona (A, B, C...)
+        self.name = name  # Nombre de la zona
         self.type = area_type  # Si es zona Schengen o No-Schengen
         self.gates = []  # Lista vacía para rellenarla con objetos de tipo Gate
 
 
 class Terminal:
     def __init__(self, name):
-        self.name = name  # Nombre de la terminal (T1 o T2)
+        self.name = name  # Nombre de la terminal 
         self.boarding_areas = []  # Lista para guardar sus zonas de embarque
         self.airlines = []  # Lista con los códigos de las aerolíneas que operan aquí
 
@@ -29,7 +29,7 @@ terminal = Terminal
 
 class BarcelonaAP:
     def __init__(self, code):
-        self.code = code  # Código del aeropuerto (LEBL)
+        self.code = code  # Código del aeropuerto 
         self.terminals = []  # Lista para guardar los objetos Terminal
 
 def SetGates(area, init_gate, end_gate, prefix):
@@ -47,7 +47,7 @@ def SetGates(area, init_gate, end_gate, prefix):
 
 
 def LoadAirlines(terminal, terminal_name):
-    # Montamos el nombre del archivo según la terminal (ej: T1_Airlines.txt)
+    # Montamos el nombre del archivo según la terminal 
     filename = terminal_name + "_Airlines.txt"
 
     try:
@@ -58,7 +58,7 @@ def LoadAirlines(terminal, terminal_name):
     terminal.airlines = []  # Vaciamos la lista de aerolíneas de la terminal
     linea = f.readline()  # Leemos la primera línea para arrancar
 
-    # El bucle sigue leyendo líneas una a una hasta que el archivo se quede vacío ("")
+    # El bucle sigue leyendo líneas una a una hasta que el archivo se quede vacío 
     while linea != "":
         parts = linea.strip().split("\t")  # Limpiamos espacios y cortamos por el tabulador
         if len(parts) == 2:
@@ -72,7 +72,7 @@ def LoadAirlines(terminal, terminal_name):
 
 def LoadAirportStructure(filename):
     try:
-        f = open(filename, "r")  # Abrimos el archivo maestro del aeropuerto (LEBL.txt)
+        f = open(filename, "r")  # Abrimos el archivo maestro del aeropuerto 
     except:
         return -1
 
@@ -94,7 +94,7 @@ def LoadAirportStructure(filename):
     # Leemos la siguiente línea para empezar el bucle principal
     linea = f.readline()
 
-    # Bucle para procesar el archivo entero línea a línea usando readline()
+    # Bucle para procesar el archivo entero línea a línea 
     while linea != "":
         parts = linea.split()  # Troceamos la línea por palabras
 
@@ -107,7 +107,7 @@ def LoadAirportStructure(filename):
         # Si define un área, creamos la zona y llamamos a SetGates para inyectarle sus puertas
         elif len(parts) >= 7 and parts[0] == "Area" and current_terminal != "":
             area = BoardingArea(parts[1], parts[2])
-            prefix = current_terminal.name + area.name + "G"  # Prefijo automático (ej: T1AG)
+            prefix = current_terminal.name + area.name + "G"  
             SetGates(area, int(parts[4]), int(parts[6]), prefix)
             current_terminal.boarding_areas.append(area)  # Añadimos el área a la terminal actual
 
@@ -127,17 +127,17 @@ def GateOccupancy(bcn):
     occupancy = []  # Aquí guardaremos la matriz con la foto del estado de las puertas
     t = 0
 
-    # Bucle 1: Recorremos cada Terminal
+    #Recorremos cada Terminal
     while t < len(bcn.terminals):
         term = bcn.terminals[t]
         a = 0
 
-        # Bucle 2: Entramos en cada Área de la terminal
+        #Entramos en cada Área de la terminal
         while a < len(term.boarding_areas):
             area = term.boarding_areas[a]
             g = 0
 
-            # Bucle 3: Revisamos cada Puerta física del área
+            #Revisamos cada Puerta física del área
             while g < len(area.gates):
                 gate = area.gates[g]
                 # Guardamos los 5 datos clave de la puerta en una sublista
@@ -160,7 +160,7 @@ def IsAirlineInTerminal(terminal, name):
     # Bucle para comprobar si el nombre de la aerolínea está en la lista de la terminal
     while i < len(terminal.airlines):
         if terminal.airlines[i] == name:
-            return True  # ¡Encontrada! Opera en esta terminal
+            return True  #Opera en esta terminal
         i = i + 1
 
     return False  # Si termina el bucle y no la ve, es que no opera aquí
@@ -171,19 +171,19 @@ def SearchTerminal(bcn, name):
     # Recorremos las terminales buscando cuál tiene contratada a esta aerolínea
     while t < len(bcn.terminals):
         if IsAirlineInTerminal(bcn.terminals[t], name) == True:
-            return bcn.terminals[t].name  # Devuelve "T1" o "T2" si la encuentra
+            return bcn.terminals[t].name  # Devuelve T1 o T2 si la encuentra
         t = t + 1
 
     return ""  # Si ninguna terminal la tiene, devolvemos un texto vacío
 
 
 def AssignGate(bcn, aircraft):
-    # 1. Buscamos en qué terminal tiene que operar el avión según su aerolínea
+    #Buscamos en qué terminal tiene que operar el avión según su aerolínea
     terminal_name = SearchTerminal(bcn, aircraft.airline)
     if terminal_name == "":
-        return -1  # Error -1: La aerolínea no tiene terminal asignada en este aeropuerto
+        return -1  #La aerolínea no tiene terminal asignada en este aeropuerto
 
-    # 2. Comprobamos si el avión viene de un aeropuerto Schengen.
+    # Comprobamos si el avión viene de un aeropuerto Schengen.
     # Si es un vuelo nocturno de salida, no tiene origen, así que usamos el destino.
     codigo_tipo = aircraft.origin
     if codigo_tipo == "" and aircraft.destination != "":
@@ -192,7 +192,7 @@ def AssignGate(bcn, aircraft):
     is_schengen = IsSchengenAirport(codigo_tipo)
     t = 0
 
-    # 3. Empezamos a buscar una puerta libre que cumpla los requisitos
+    #Empezamos a buscar una puerta libre que cumpla los requisitos
     while t < len(bcn.terminals):
         term = bcn.terminals[t]
 
@@ -202,7 +202,7 @@ def AssignGate(bcn, aircraft):
             while a < len(term.boarding_areas):
                 area = term.boarding_areas[a]
 
-                # Filtramos: el tipo de área (Schengen/No-Schengen) debe coincidir con el tipo de vuelo
+                # Filtramos el tipo de área debe coincidir con el tipo de vuelo
                 if (is_schengen == True and area.type == "Schengen") or (
                         is_schengen == False and area.type == "non-Schengen"):
                     g = 0
@@ -213,14 +213,14 @@ def AssignGate(bcn, aircraft):
                         if gate.occupied == False:
                             gate.occupied = True
                             gate.aircraft_id = aircraft.aircraft_id
-                            return 0  # Éxito: puerta asignada correctamente
+                            return 0  #puerta asignada correctamente
                         g = g + 1
 
                 a = a + 1
 
         t = t + 1
 
-    return -2  # Error -2: No quedan puertas libres compatibles para este tipo de vuelo
+    return -2  #No quedan puertas libres compatibles para este tipo de vuelo
 
 
 def ResetGates(bcn):
@@ -249,7 +249,7 @@ def AssignNightGates(bcn, aircrafts):
     while i < len(aircrafts):
         avion = aircrafts[i]
 
-        # Verificamos la condición: solo vuelos de salida (llegada vacía)
+        # Verificamos la condición solo vuelos de salida 
         if avion.arrival_time == "" and avion.departure_time != "":
             # Usamos tu función AssignGate para asignarle puerta
             AssignGate(bcn, avion)
@@ -261,7 +261,7 @@ def AssignNightGates(bcn, aircrafts):
 
 
 def FreeGate(bcn, id):
-    # Usamos tu misma estructura de 3 bucles while anidados para recorrer todo el aeropuerto
+    # Usamos la misma estructura de 3 bucles while anidados para recorrer todo el aeropuerto
     encontrado = False
 
     t = 0
@@ -298,7 +298,7 @@ def AssignGatesAtTime(bcn, aircrafts, time):
     if bcn == "" or bcn == -1 or len(aircrafts) == 0:
         return -1
 
-    # Descomponemos la hora que nos pasan (ej: "12:00" -> nos quedamos con "12")
+    # Descomponemos la hora que nos pasan
     partes_tiempo = time.split(":")
     hora_objetivo = partes_tiempo[0]
 
@@ -438,7 +438,7 @@ def PlotDayOccupancy(bcn, aircrafts):
     if bcn == "" or bcn == -1 or len(aircrafts) == 0:
         return -1
 
-    # 1. Preparamos el aeropuerto para empezar desde cero
+    #Preparamos el aeropuerto para empezar desde cero
     ResetGates(bcn)
     AssignNightGates(bcn, aircrafts)
 
@@ -456,7 +456,7 @@ def PlotDayOccupancy(bcn, aircrafts):
         datos_ocupacion_terminales.append([])  # Guardará los 24 datos de esa terminal
         t = t + 1
 
-    # 2. Simulamos el día hora a hora (de 0 a 23)
+    #Simulamos el día hora a hora (de 0 a 23)
     h = 0
     while h < 24:
         # Fabricamos el string de la hora de forma manual y limpia
@@ -493,7 +493,7 @@ def PlotDayOccupancy(bcn, aircrafts):
 
         h = h + 1
 
-    # 3. Construimos el gráfico interactivo
+    #Construimos el gráfico interactivo
     plt.figure(figsize=(12, 6))
 
     # Dibujamos las líneas de ocupación para cada terminal usando un bucle while
@@ -521,21 +521,19 @@ def PlotDayOccupancy(bcn, aircrafts):
 
 #EXTRAS
 def AssignGateOptimized(bcn, aircraft):
-    # 1. Buscamos en qué terminal tiene que operar el avión según su aerolínea
+    #Buscamos en qué terminal tiene que operar el avión según su aerolínea
     terminal_name = SearchTerminal(bcn, aircraft.airline)
     if terminal_name == "":
-        return -1  # Error -1: La aerolínea no tiene terminal asignada
+        return -1  #La aerolínea no tiene terminal asignada
 
-    # 2. Comprobamos si el avión viene de un aeropuerto Schengen
+    #Comprobamos si el avión viene de un aeropuerto Schengen
     codigo_tipo = aircraft.origin
     if codigo_tipo == "" and aircraft.destination != "":
         codigo_tipo = aircraft.destination
 
     is_schengen = IsSchengenAirport(codigo_tipo)
 
-    # --- AQUÍ EMPIEZA LA OPTIMIZACIÓN ---
-    # En lugar de quedarnos con la primera que veamos, vamos a buscar TODAS las compatibles
-    # y elegiremos la que tenga menor distancia.
+    # En lugar de quedarnos con la primera que veamos, vamos a buscar TODAS las compatibles y elegiremos la que tenga menor distancia
     puerta_optima = None
     distancia_minima = 999999  # Empezamos con un número muy alto para poder ir rebajándolo
 
@@ -548,7 +546,7 @@ def AssignGateOptimized(bcn, aircraft):
             while a < len(term.boarding_areas):
                 area = term.boarding_areas[a]
 
-                # Filtramos por tipo de vuelo (Schengen o No-Schengen)
+                # Filtramos por tipo de vuelo 
                 if (is_schengen == True and area.type == "Schengen") or (
                         is_schengen == False and area.type == "non-Schengen"):
 
@@ -566,13 +564,13 @@ def AssignGateOptimized(bcn, aircraft):
                 a = a + 1
         t = t + 1
 
-    # 3. Una vez revisadas todas las opciones, si encontramos una puerta óptima, la asignamos
+    #Una vez revisadas todas las opciones, si encontramos una puerta óptima, la asignamos
     if puerta_optima is not None:
         puerta_optima.occupied = True
         puerta_optima.aircraft_id = aircraft.aircraft_id
         return 0  # Éxito
 
-    return -2  # Error -2: No quedan puertas libres compatibles
+    return -2  #No quedan puertas libres compatibles
 
 
 
@@ -581,7 +579,7 @@ import os
 
 def MapGatesToGoogleEarth(bcn, filename="lebl_gates_live.kml"):
 
-    # --- 1. CÁLCULO DE ESTADÍSTICAS EN TIEMPO REAL ---
+    #CÁLCULO DE ESTADÍSTICAS EN TIEMPO REAL
     t1_totales = 0
     t1_ocupadas = 0
     t2_totales = 0
@@ -617,7 +615,7 @@ def MapGatesToGoogleEarth(bcn, filename="lebl_gates_live.kml"):
     f.write('<kml xmlns="http://www.opengis.net/kml/2.2">\n')
     f.write('<Document>\n')
 
-    # --- 2. PANEL DE CONTROL NATIVO EN HTML ---
+    #PANEL DE CONTROL NATIVO EN HTML
     f.write('  <name>LEBL - Control de Áreas Profesional</name>\n')
     f.write('  <open>1</open>\n')  # Hace que el árbol de carpetas izquierdo se expanda solo
     f.write('  <description><![CDATA[\n')
@@ -647,7 +645,7 @@ def MapGatesToGoogleEarth(bcn, filename="lebl_gates_live.kml"):
     f.write('    </div>\n')
     f.write('  ]]></description>\n')
 
-    # --- 3. ESTILOS DE CHINCHETAS Y PUERTAS ---
+    #ESTILOS DE CHINCHETAS Y PUERTAS
     # Estilo de chincheta blanca limpia para los centros de las áreas
     f.write('  <Style id="centro_area">\n')
     f.write('    <IconStyle>\n')
@@ -663,7 +661,7 @@ def MapGatesToGoogleEarth(bcn, filename="lebl_gates_live.kml"):
     f.write(
         '  <Style id="ocupado"><IconStyle><color>ff0000ff</color><scale>1.2</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon></IconStyle></Style>\n')
 
-    # --- 4. CONSTRUCCIÓN DEL MAPA (Efecto Abanico Puro) ---
+    # CONSTRUCCIÓN DEL MAPA 
     i = 0
     while i < len(bcn.terminals):
         t = bcn.terminals[i]
@@ -701,7 +699,7 @@ def MapGatesToGoogleEarth(bcn, filename="lebl_gates_live.kml"):
                 gate = area.gates[k]
                 nombre_real = str(gate.name).strip().upper()
 
-                # EFECTO ABANICO: Forzamos a que todas las puertas mueran exactamente en el mismo punto
+                # Forzamos a que todas las puertas mueran exactamente en el mismo punto
                 lat_gate = lat_area
                 lon_gate = lon_area
 
