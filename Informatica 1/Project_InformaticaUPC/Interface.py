@@ -965,6 +965,88 @@ tk.Label(
 frame_principal = tk.Frame(root, bg=COLOR_FONDO)
 frame_principal.pack(padx=10, pady=2, fill=tk.BOTH, expand=True)
 
+def accion_eliminar_avion():
+    # Cogemos todos los datos escritos por el usuario
+    id_avion = entrada_id.get()
+    origen = entrada_origen.get()
+    llegada = entrada_llegada.get()
+    aerolinea = entrada_aerolinea.get()
+
+    # Quitamos espacios innecesarios
+    id_avion = id_avion.strip().upper()
+    origen = origen.strip().upper()
+    llegada = llegada.strip()
+    aerolinea = aerolinea.strip().upper()
+
+    # Para eliminar el avión, obligamos a rellenar todos los campos
+    if id_avion == "" or origen == "" or llegada == "" or aerolinea == "":
+        messagebox.showwarning("Error", "Debes rellenar todos los datos del avión que quieres eliminar.")
+
+    else:
+        encontrado = False
+        id_existe = False
+        i = 0
+
+        # Recorremos la lista de vuelos buscando un avión que coincida con TODOS los datos
+        while i < len(lista_vuelos) and encontrado == False:
+            avion = lista_vuelos[i]
+
+            # Comprobamos si al menos existe el ID
+            if avion.aircraft_id == id_avion:
+                id_existe = True
+
+            # Comprobamos que coincidan todos los datos escritos
+            if avion.aircraft_id == id_avion and avion.origin == origen and avion.arrival_time == llegada and avion.airline == aerolinea:
+                encontrado = True
+
+                # Eliminamos el avión desplazando los elementos de la lista
+                j = i
+                while j < len(lista_vuelos) - 1:
+                    lista_vuelos[j] = lista_vuelos[j + 1]
+                    j = j + 1
+
+                # Quitamos la última posición, porque queda repetida
+                lista_vuelos[:] = lista_vuelos[0:len(lista_vuelos) - 1]
+
+            else:
+                i = i + 1
+
+        if encontrado == True:
+            # Si el avión tenía puerta asignada, la liberamos
+            if bcn != "" and bcn != -1:
+                FreeGate(bcn, id_avion)
+
+            # Borramos las ocupaciones por horas antiguas porque la lista ha cambiado
+            lista_ocupacion_horas[:] = []
+            lista_fotos_horas[:] = []
+
+            # Limpiamos los cuadros de texto
+            entrada_id.delete(0, tk.END)
+            entrada_origen.delete(0, tk.END)
+            entrada_llegada.delete(0, tk.END)
+            entrada_aerolinea.delete(0, tk.END)
+
+            # Actualizamos la pantalla central de vuelos
+            actualizar_pantalla_vuelos()
+
+            cambiar_estado("Avión eliminado de la lista: " + id_avion)
+            messagebox.showinfo("INFO", "Avión eliminado correctamente.")
+
+        else:
+            if id_existe == True:
+                messagebox.showwarning(
+                    "Error",
+                    "Existe un avión con ese ID, pero los otros datos no coinciden."
+                )
+                cambiar_estado("El ID existe, pero los datos no coinciden: " + id_avion)
+
+            else:
+                messagebox.showwarning(
+                    "Error",
+                    "No se ha encontrado ningún avión con esos datos."
+                )
+                cambiar_estado("No se ha encontrado el avión: " + id_avion)
+
 
 # ---------------- COLUMNA IZQUIERDA ----------------
 frame_izquierda = tk.Frame(
@@ -1030,8 +1112,8 @@ entrada_aerolinea.grid(row=3, column=1, padx=5, pady=3)
 
 boton(
     frame_izquierda,
-    "Añadir avión a la lista",
-    accion_anadir_avion,
+    "Eliminar avion de la lista",
+    accion_eliminar_avion,
     COLOR_AVION,
     34
 )
