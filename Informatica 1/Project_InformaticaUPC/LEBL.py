@@ -747,10 +747,10 @@ def ManejarRadarTiempo(segundos_espera=5):
     from Aircraft import LoadArrivals  # Importación local para evitar conflictos
 
     print(
-        f"\n[⏱️] Motor de tiempo iniciado. Escaneando cambios cada {segundos_espera}s..."
+        f"\n Motor de tiempo iniciado. Escaneando cambios cada {segundos_espera}s"
     )
     print(
-        "[💡] Para detener el programa, presiona Ctrl+C aquí en la consola.\n"
+        " Para detener el programa, presiona Ctrl+C aquí en la consola.\n"
     )
 
     try:
@@ -770,12 +770,12 @@ def ManejarRadarTiempo(segundos_espera=5):
 
                 # Sobrescribimos el KML. Google Earth lo leerá solo en segundo plano.
                 MapGatesToGoogleEarth(bcn_live, filename="lebl_gates_live.kml")
-                print("• [Radar Sync] Archivos escaneados y mapa actualizado.")
+                print("[Radar Sync] Archivos escaneados y mapa actualizado.")
             else:
-                print("[!] Error leyendo 'LEBL.txt' en este ciclo.")
+                print("Error leyendo 'LEBL.txt' en este ciclo.")
 
     except KeyboardInterrupt:
-        print("\n[INFO] El motor de tiempo del radar se ha apagado de forma segura.")
+        print("\nEl motor de tiempo del radar se ha apagado de forma segura.")
 
 if __name__ == "__main__":
     from Aircraft import LoadArrivals

@@ -262,17 +262,21 @@ def LongDistanceArrivals(aircrafts, airports):
         i = i + 1
     return vuelos_lejanos
 
-
+#Leemos el archivo y leemos los datos de los vuelos que despegan
 def LoadDepartures(filename):
     aircrafts = []
     try:
         f = open(filename, "r")
-        lineas = f.readlines()
-        f.close()
 
-        i = 1
-        while i < len(lineas):
-            parts = lineas[i].split()
+        # 1. Leemos la primera línea y no hacemos nada con ella para saltarnos la cabecera
+        f.readline()
+
+        # 2. Leemos la primera línea de datos reales
+        linea = f.readline()
+
+        # 3. Mientras la línea no esté vacía (significa que no hemos llegado al final del archivo)
+        while linea != "":
+            parts = linea.split()
 
             if len(parts) >= 4:
                 id_aircraft = parts[0]
@@ -286,7 +290,13 @@ def LoadDepartures(filename):
                 # Pasamos los parámetros en orden: id, aerolínea, origen (""), llegada (""), destino, salida
                 nuevo_avion = Aircraft(id_aircraft, airline, "", "", dest, dep_time)
                 aircrafts.append(nuevo_avion)
-            i = i + 1
+
+            # 4. Avanzamos leyendo la siguiente línea antes de que el bucle vuelva a empezar
+            linea = f.readline()
+
+        # Cerramos el archivo al salir del bucle while
+        f.close()
+
     except:
         print(f"El archivo {filename} no se pudo abrir.")
         return []
